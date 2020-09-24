@@ -1,0 +1,13 @@
+$mt-triangle: -6px;
+
+@mixin triangle($rotate: -135deg, $color: white) {
+  &::before {
+    @include transition;
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-bottom: 1px solid $color;
+    border-left: 1px solid $color;
+    transform: rotate($rotate);
+  }
+}

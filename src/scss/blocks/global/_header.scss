@@ -12,13 +12,23 @@
   background-position: 0 0;
   background-size: cover;
 
-  @include before {
-    top: 0;
-    left: 0;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+  /* VIDEO OVERLAY */
+  //@include before {
+  //  top: 0;
+  //  left: 0;
+  //  z-index: 2;
+  //  width: 100%;
+  //  height: 100%;
+  //  background-color: rgba(0, 0, 0, 0.3);
+  //}
+
+  @include after {
+    @include center-transform-horizon;
+    bottom: 0;
+    z-index: 100;
+    width: 2px;
+    height: 64px;
+    background-color: $color-black-3;
   }
 }
 
@@ -57,8 +67,12 @@
   @include reset-button;
   position: relative;
   width: 42px;
-  height: 11px;
+  height: 17px;
   margin-right: 16px;
+
+  @include before-after-hover {
+    background-color: white;
+  }
 
   @include before-after {
     @include transition;
@@ -73,13 +87,14 @@
   }
 
   @include after-clean {
-    bottom: 0;
+    bottom: 5px;
     width: 80%;
   }
 }
 
 .header__navigation {
-  display: none;
+  @include flex;
+  align-items: center;
 }
 
 .header__image {
@@ -103,7 +118,112 @@
   @include flex;
   @include reset-margin-text;
   align-items: center;
-  min-height: 67px; // Временно
+  margin-right: 69px;
+}
+
+.header__weather {
+  @include flex;
+  align-items: center;
+}
+
+.header__temperature {
+  @include reset-margin-text;
+}
+
+.header__weather-icon {
+  display: inline-block;
+  margin-right: 21px;
+}
+
+.header__down {
+  @include center-transform-horizon;
+  @include transition;
+  @include flex;
+  position: absolute;
+  bottom: 42px;
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+  width: 93px;
+  height: 93px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: $color-gray;
+  background-color: white;
+  border-radius: 50%;
+
+  @include hover {
+    bottom: 52px;
+  }
+
+  @include active {
+    transform: translateX(-50%) scale($down-scale);
+  }
+}
+
+.header__list {
+  @include flex;
+  @include reset-list;
+}
+
+.header__item {
+  display: none;
+
+  &--reservation {
+    display: block;
+  }
+}
+
+.header__languages {
+  @include flex;
+  @include triangle(-45deg, $color-black-2);
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-right: 70px;
+
+  @include hover {
+    @include before-clean {
+      margin-top: 0;
+      border-color: $color-gold;
+      transform: rotate(135deg);
+    }
+
+    .header__languages-content {
+      font-size: inherit;
+      opacity: 1;
+    }
+  }
+
+  @include before-clean {
+    margin-top: $mt-triangle;
+  }
+}
+
+.header__languages-link {
+  @include focus-color();
+}
+
+.header__languages-content {
+  @include transition;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 10;
+  font-size: 0;
+  opacity: 0;
+}
+
+.header__place {
+  display: none;
+}
+
+.header__languages-item {
+  &--active {
+    margin-left: 13px;
+  }
 }
 
 // <1600px

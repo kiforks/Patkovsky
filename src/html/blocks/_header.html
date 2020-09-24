@@ -12,7 +12,16 @@
       </button>
       <p class="header__label" id="header__label">Меню</p>
 
-      <include src="src/html/blocks/_icons.html"></include>
+      <section class="header__weather">
+        <h4 class="visually-hidden">Погода</h4>
+        <!--SVG-->
+        <svg class="header__weather-icon" width="50" height="40">
+          <use xlink:href="#icon-weather"></use>
+        </svg>
+        <p class="header__temperature">+17</p>
+      </section>
+<!--                            ICONS                     -->
+<!--      <include src="src/html/blocks/_icons.html"></include>-->
     </div>
 
     <div class="header__logo">
@@ -59,8 +68,8 @@
         <li class="header__item" role="none">
           <a href="#" class="header__link" role="menuitem">ХАРЧУВАННЯ</a>
         </li>
-        <li class="header__item" role="none">
-          <a href="#" class="header__link header__link--reservation" role="menuitem">БРОНЮВАТИ</a>
+        <li class="header__item header__item--reservation" role="none">
+          <include src="src/html/blocks/link/_header.html"></include>
         </li>
         <li class="header__item" role="none">
           <a href="#" class="header__link" role="menuitem">РОЗВАГИ</a>
@@ -69,11 +78,10 @@
 
       <p class="header__place">БУКОВЕЛЬ, с. ПОЛЯНИЦЯ</p>
 
-      <div class="header__down">
-        <a href="#" class="header__link-down">Більше</a>
-      </div>
-
     </nav>
 
   </div>
+  
+  <a href="#" class="header__down">Більше</a>
+
 </header>

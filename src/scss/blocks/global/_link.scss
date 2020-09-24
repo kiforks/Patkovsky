@@ -1,0 +1,29 @@
+.link {
+  @include triangle();
+  @include transition;
+  @include padding-vertical(20px);
+  @include padding-horizon(27px, 21px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: $color-gold;
+
+  @include before-clean {
+    margin-top: -2px;
+  }
+
+  @include hover {
+    color: $color-gold;
+    background-color: $color-black-2;
+
+    @include before-clean {
+      border-color: $color-gold;
+      transform: rotate(45deg);
+    }
+  }
+
+  @include before-clean {
+    margin-right: 20px;
+  }
+}
