@@ -13,20 +13,21 @@
       <p class="header__label header__label--open" id="header__label">Меню</p>
       <p class="header__label header__label--closed">Закрити</p>
 
+      <div class="header__logo">
+        <img src="img/svg/header/logo.svg" width="471" height="224" alt="Hotel patkovski" class="header__image">
+      </div>
+
       <section class="header__weather">
         <h4 class="visually-hidden">Погода</h4>
         <!--SVG-->
-        <svg class="header__icon header__icon--weather" width="50" height="40" role="presentation">
+        <svg class="header__icon header__icon--weather" width="50" height="40" >
           <use xlink:href="#icon-weather"></use>
         </svg>
         <p class="header__temperature">+17</p>
       </section>
-<!--                            ICONS                     -->
-      <include src="src/html/blocks/_icons.html"></include>
-    </div>
 
-    <div class="header__logo">
-      <img src="img/svg/header/logo.svg" width="471" height="224" alt="Hotel patkovski" class="header__image">
+      <!--                            ICONS                     -->
+      <include src="src/html/blocks/_icons.html"></include>
     </div>
 
     <div class="header__languages" role="list">
@@ -76,12 +77,11 @@
           <a href="#" class="header__link" role="menuitem">РОЗВАГИ</a>
         </li>
       </ul>
-
     </nav>
 
     <p class="header__place">
       <!--SVG-->
-      <svg class="header__icon header__icon--map" width="20" height="25" role="presentation">
+      <svg class="header__icon header__icon--map" width="20" height="25" >
         <use xlink:href="#icon-track"></use>
       </svg>
       БУКОВЕЛЬ, с. ПОЛЯНИЦЯ

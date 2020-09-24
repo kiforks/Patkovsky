@@ -10,4 +10,13 @@ $mt-triangle: -6px;
     border-left: 1px solid $color;
     transform: rotate($rotate);
   }
+
+  @include desktop-middle {
+    &::before {
+      width: 10px;
+      height: 10px;
+    }
+  }
 }
+
+

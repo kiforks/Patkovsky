@@ -5,7 +5,7 @@ function toggleClass(options) {
   const buttonClass = `${options.toggleButton}`;
   const ACTIVE_CLASS = '--active';
   const HIDE_CLASS = '--hide';
-  const ANIMATION_TIME = 5000;  // Transition duration
+  const ANIMATION_TIME = 300;  // Transition duration
   const itemHideClass = itemClass + HIDE_CLASS;
   const itemActiveClass = itemClass + ACTIVE_CLASS;
   const toggleItem = document.querySelectorAll(`.${itemClass + options.modifierItem}`);
