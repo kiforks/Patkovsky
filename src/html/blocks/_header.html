@@ -10,12 +10,13 @@
       <button class="header__button" aria-haspopup="true" aria-controls="menu" aria-labelledby="header__label" id="header__button">
         <span class="visually-hidden">Відкрити/закрити навігаційне меню</span>
       </button>
-      <p class="header__label" id="header__label">Меню</p>
+      <p class="header__label header__label--open" id="header__label">Меню</p>
+      <p class="header__label header__label--closed">Закрити</p>
 
       <section class="header__weather">
         <h4 class="visually-hidden">Погода</h4>
         <!--SVG-->
-        <svg class="header__weather-icon" width="50" height="40">
+        <svg class="header__icon header__icon--weather" width="50" height="40" role="presentation">
           <use xlink:href="#icon-weather"></use>
         </svg>
         <p class="header__temperature">+17</p>
@@ -28,21 +29,21 @@
       <img src="img/svg/header/logo.svg" width="471" height="224" alt="Hotel patkovski" class="header__image">
     </div>
 
-    <nav class="header__navigation">
-      <div class="header__languages" role="list">
-        <div class="header__languages-item header__languages-item--active" role="listitem">
-          <a href="#" class="header__languages-link">Укр</a>
+    <div class="header__languages" role="list">
+      <div class="header__languages-item header__languages-item--active" role="listitem">
+        <a href="#" class="header__languages-link">Укр</a>
+      </div>
+      <div class="header__languages-content">
+        <div class="header__languages-item" role="listitem">
+          <a href="#" class="header__languages-link">EN</a>
         </div>
-        <div class="header__languages-content">
-          <div class="header__languages-item" role="listitem">
-            <a href="#" class="header__languages-link">EN</a>
-          </div>
-          <div class="header__languages-item" role="listitem">
-            <a href="#" class="header__languages-link">RU</a>
-          </div>
+        <div class="header__languages-item" role="listitem">
+          <a href="#" class="header__languages-link">RU</a>
         </div>
       </div>
+    </div>
 
+    <nav class="header__navigation">
       <ul class="header__list" id="menu" role="menu">
         <li class="header__item" role="none">
           <a href="#" class="header__link" role="menuitem">НОМЕРИ</a>
@@ -76,12 +77,18 @@
         </li>
       </ul>
 
-      <p class="header__place">БУКОВЕЛЬ, с. ПОЛЯНИЦЯ</p>
-
     </nav>
 
+    <p class="header__place">
+      <!--SVG-->
+      <svg class="header__icon header__icon--map" width="20" height="25" role="presentation">
+        <use xlink:href="#icon-track"></use>
+      </svg>
+      БУКОВЕЛЬ, с. ПОЛЯНИЦЯ
+    </p>
+
   </div>
-  
+
   <a href="#" class="header__down">Більше</a>
 
 </header>

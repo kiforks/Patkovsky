@@ -4,14 +4,9 @@
   @include padding-vertical(20px);
   @include padding-horizon(27px, 21px);
   display: flex;
-  justify-content: space-between;
   align-items: center;
   color: white;
   background-color: $color-gold;
-
-  @include before-clean {
-    margin-top: -2px;
-  }
 
   @include hover {
     color: $color-gold;
@@ -23,7 +18,14 @@
     }
   }
 
+  @include active-scale();
+
   @include before-clean {
-    margin-right: 20px;
+    margin-top: -6px;
   }
+}
+
+.link__text {
+  display: inline-block;
+  margin-left: 12px;
 }
