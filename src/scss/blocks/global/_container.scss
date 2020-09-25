@@ -10,7 +10,6 @@
 @include tablet {
   .container {
     @include padding-tablet;
-    width: $tablet-width;
   }
 }
 
@@ -19,6 +18,5 @@
 @include mobile {
   .container {
     @include padding-mobile;
-    width: 100%;
   }
 }

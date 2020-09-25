@@ -4,6 +4,7 @@
   font-weight: bold;
   font-size: 22px;
   line-height: 27px;
+  font-family: $font-family-cormorant;
   text-align: center;
   color: $color-black-2;
   text-transform: uppercase;
@@ -765,6 +766,7 @@
     &--active,
     &--hide {
       .header__container {
+        flex-direction: row;
         padding-bottom: 10px;
       }
 
@@ -773,7 +775,11 @@
         font-size: 18px;
 
         &--reservation {
-          margin-bottom: 20px;
+          @media (max-height: 620px) {
+            margin-bottom: 20px;
+          }
+
+          margin-bottom: 25px;
         }
       }
 
@@ -818,8 +824,12 @@
   }
 
   .header__item {
+    @media (max-height: 620px) {
+      margin-bottom: 20px;
+    }
+
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 
     &--reservation {
       max-height: 40px;
@@ -827,7 +837,11 @@
     }
 
     &:nth-of-type(even) {
-      margin-bottom: 20px;
+      @media (max-height: 620px) {
+        margin-bottom: 20px;
+      }
+
+      margin-bottom: 25px;
       padding-left: 0;
     }
   }
@@ -887,7 +901,7 @@
   }
 
   .header__navigation {
-    margin-top: 0;
+    margin-top: auto;
     margin-bottom: auto;
   }
 }

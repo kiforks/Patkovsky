@@ -1,0 +1,51 @@
+.button {
+  @include focus-color(white);
+  position: relative;
+  display: inline-block;
+  min-width: 360px;
+  margin-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  @include transition;
+
+  @include hover {
+    box-shadow: inset 360px 0 0 0 $color-black;
+
+    .button__text {
+      box-shadow: inset 360px 0 0 0 $color-black;
+    }
+  }
+
+  //@include before-after-hover {
+  //  border-color: transparent;
+  //}
+  //
+  //@include before-after {
+  //  @include transition;
+  //  z-index: -1;
+  //  width: 97.6%;
+  //  height: 90%;
+  //  border: 1px solid $color-black;
+  //}
+  //
+  //@include before-clean {
+  //  top: 0;
+  //  left: 0;
+  //}
+  //
+  //@include after-clean {
+  //  right: -4px;
+  //  bottom: -2px;
+  //}
+}
+
+.button__text {
+  @include transition;
+  position: relative;
+  z-index: 10;
+  display: block;
+  padding: 24px 20px;
+}

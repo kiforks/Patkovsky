@@ -1,0 +1,40 @@
+.details {
+  padding-top: 5.42%;
+}
+
+.details__wrapper {
+  @include flex;
+  justify-content: space-between;
+}
+
+.details__picture {
+  width: 38.9%;
+  max-height: 861px;
+}
+
+.details__image {
+  @include object-fit(cover);
+}
+
+.details__inner {
+  width: 53.3%;
+  padding-top: 8.6%;
+  padding-right: 14%;
+}
+
+.details__title {
+  margin-bottom: 8%;
+}
+
+.details__description {
+  @include reset-margin-text;
+  margin-bottom: 1.2%;
+
+  &:last-of-type:not(.details__description--acquaintance) {
+    margin-bottom: 0;
+  }
+
+  &--acquaintance {
+    margin-bottom: 8%;
+  }
+}

@@ -1,0 +1,20 @@
+.wrapper {
+  //Tablet
+  @include tablet {
+    & {
+      @include padding-tablet;
+    }
+  }
+
+  //Mobile
+  @include mobile {
+    & {
+      @include padding-mobile;
+    }
+  }
+
+  @include padding-horizon(15px);
+  @include center-margin;
+  width: 100%;
+  max-width: 1890px + (15px * 2);
+}
