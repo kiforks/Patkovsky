@@ -68,7 +68,7 @@
 
 .preloader-logo {
   top: 170px;
-  width: 36%;
+  width: 36% !important;
 
   &--active {
     transition: 1s all ease;

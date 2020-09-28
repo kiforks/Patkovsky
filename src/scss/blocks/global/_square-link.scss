@@ -82,12 +82,14 @@
 // <768px
 @include mobile {
   .square-link {
+    @include margin-vertical(60px);
     position: relative;
     top: 0;
     left: 0;
     width: 160px;
     height: 160px;
     transform: translate(0);
+    mix-blend-mode: normal;
 
     @include before-clean {
       border-color: $color-black-3;

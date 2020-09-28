@@ -22,8 +22,16 @@
 }
 
 .details__picture {
+  position: relative;
   width: 38.9%;
   max-height: 861px;
+
+  @include before {
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 }
 
 .details__image {
@@ -79,6 +87,21 @@
   }
 }
 
+.details__photo-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  @include before {
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
 .details__square-link {
   position: absolute;
   top: 25%;
@@ -112,6 +135,96 @@
   }
 }
 
+.details__price-box {
+  @include padding-horizon(15px);
+  position: absolute;
+  bottom: 2.5%;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+}
+
+.details__price-container {
+  @include flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.details__price {
+  @include focus-scale();
+  @include margin-horizon(3.5%);
+  display: inline-block;
+  font-size: 18px;
+  line-height: 100%;
+  color: $color-gold;
+  text-transform: uppercase;
+}
+
+.details__price-icon {
+  position: relative;
+  flex-grow: 1;
+  height: 10px;
+
+  @include before-after {
+    background-color: $color-gold;
+  }
+
+  @include before-clean {
+    @include center-transform-vertical;
+    width: 97.5%;
+    height: 1px;
+  }
+
+  @include after-clean {
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+  }
+
+  &--left {
+    @include before-clean {
+      left: 0;
+    }
+
+    @include after-clean {
+      right: 0;
+    }
+  }
+
+  &--right {
+    @include before-clean {
+      right: 0;
+    }
+
+    @include after-clean {
+      left: 0;
+    }
+  }
+}
+
+// <1600px
+@include desktop-middle {
+  .details__price {
+    font-size: 14px;
+  }
+
+  .details__price-icon {
+    height: 8px;
+
+    @include before-clean {
+      width: 95%;
+    }
+
+    @include after-clean {
+      width: 8px;
+      height: 8px;
+    }
+  }
+}
+
 // <1440px
 @include desktop-small {
   .details__photo {
@@ -135,6 +248,19 @@
 
   .details__box {
     margin-top: -55px;
+  }
+
+  .details__price {
+    font-size: 12px;
+  }
+
+  .details__price-icon {
+    height: 7px;
+
+    @include after-clean {
+      width: 7px;
+      height: 7px;
+    }
   }
 }
 
@@ -170,6 +296,19 @@
 
   .details__box {
     margin-top: -40px;
+  }
+
+  .details__price {
+    font-size: 10px;
+  }
+
+  .details__price-icon {
+    height: 5px;
+
+    @include after-clean {
+      width: 5px;
+      height: 5px;
+    }
   }
 }
 
@@ -214,11 +353,16 @@
     @include flex;
     justify-content: center;
     width: 100%;
-    height: 187px;
+    height: auto;
 
     @include before-clean {
       display: none;
     }
+  }
+
+  .details__photo-box {
+    position: static;
+    height: 187px;
   }
 
   .details__photo-item {
@@ -227,6 +371,14 @@
 
   .details__button {
     @include center-margin;
+  }
+
+  .details__price {
+    font-size: 12px;
+  }
+
+  .details__price-box {
+    position: static;
   }
 }
 
