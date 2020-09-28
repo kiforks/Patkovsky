@@ -22,7 +22,7 @@
 
 .parallax__image {
   position: sticky;
-  top: 0;
+  top: 180px;
   width: 100%;
   background-repeat: no-repeat;
   background-size: contain;
@@ -35,10 +35,30 @@
   }
 }
 
+// <1440px
+@include desktop-small {
+  .parallax__image {
+    top: 150px;
+  }
+}
+
+
+// <1200px
+@include tablet {
+  .parallax__image {
+    top: 110px;
+  }
+}
+
+
 // <768px
 @include mobile {
   .parallax__wrapper {
     width: 50%;
+  }
+
+  .parallax__image {
+    top: 180px;
   }
 }
 
