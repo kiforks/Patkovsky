@@ -30,7 +30,7 @@
     @include transition;
     @include center-transform-horizon;
     bottom: 0;
-    z-index: 100;
+    z-index: 5;
     width: 2px;
     height: 64px;
     max-height: 64px;
@@ -45,6 +45,7 @@
     }
 
     .header__box {
+      height: 100vh;
       background-color: $color-black;
       background-image: url('../img/main/header/background_menu.png');
       background-position: center;
@@ -98,6 +99,7 @@
     }
 
     .header__logo {
+      top: -250px;
       opacity: 0;
     }
 
@@ -158,8 +160,7 @@
     .header__container {
       align-content: space-between;
       height: 100vh;
-      padding-bottom: 2.5%;
-      overflow-x: hidden;
+      padding-bottom: 3%;
     }
 
     .header__place {
@@ -184,6 +185,8 @@
     }
 
     .header__box {
+      min-height: 210px;
+      overflow-x: hidden;
       background-color: transparent;
     }
 
@@ -234,6 +237,7 @@
     }
 
     .header__logo {
+      top: 0;
       opacity: 1;
     }
 
@@ -321,6 +325,15 @@
   left: 0;
   z-index: 100;
   width: 100%;
+  min-height: 180px;
+
+  &--fixed {
+    background-color: white;
+
+    .header__logo {
+      width: 17.5%;
+    }
+  }
 }
 
 .header__video {
@@ -331,6 +344,7 @@
   z-index: 1;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .header__movie {
@@ -349,7 +363,7 @@
   align-items: center;
   width: 100%;
   min-height: 115px;
-  padding-top: 2.5%;
+  padding-top: 3%;
 }
 
 .header__wrapper {
@@ -378,7 +392,7 @@
   margin-right: 16px;
 
   @include before-after-hover {
-    background-color: white;
+    background-color: $color-gold;
   }
 
   @include before-after {
@@ -423,6 +437,7 @@
 }
 
 .header__image {
+  @include transition;
   @include object-fit(contain);
 }
 
@@ -477,7 +492,7 @@
   @include flex;
   position: absolute;
   bottom: 42px;
-  z-index: 100;
+  z-index: 5;
   justify-content: center;
   align-items: center;
   width: 93px;
@@ -558,7 +573,7 @@
 }
 
 .header__languages-link {
-  @include focus-color();
+  @include focus-color($color-gold);
 }
 
 .header__languages-content {
@@ -626,6 +641,13 @@
       height: 52px;
     }
 
+    &--active,
+    &--hide {
+      .header__container {
+        padding-bottom: 3.5%;
+      }
+    }
+
     &--hide {
       .header__link {
         &--reservation {
@@ -637,6 +659,22 @@
       .header__down {
         width: 80px;
         height: 80px;
+      }
+
+      .header__container {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .header__container {
+    padding-top: 3.5%;
+  }
+
+  .header__box {
+    &--fixed {
+      .header__logo {
+        width: 25%;
       }
     }
   }
@@ -691,16 +729,33 @@
       height: 45px;
     }
 
-    &--active {
+    &--active,
+    &--hide {
       .header__container {
-        padding-bottom: 1.5%;
+        padding-bottom: 3%;
+      }
+    }
+
+    &--hide {
+      .header__container {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .header__box {
+    min-height: 150px;
+
+    &--fixed {
+      .header__logo {
+        width: 22%;
       }
     }
   }
 
   .header__container {
     min-height: auto;
-    padding-top: 1.5%;
+    padding-top: 3%;
   }
 
   .header__button {
@@ -740,12 +795,35 @@
   .header {
     font-size: 14px;
 
+    &--active,
+    &--hide {
+      padding-bottom: 1.5%;
+    }
+
     &--hide {
       .header__link {
         @include padding-vertical(10px);
         @include padding-horizon(16px, 10px);
       }
+
+      .header__container {
+        padding-bottom: 0;
+      }
     }
+  }
+
+  .header__box {
+    min-height: 102px;
+
+    &--fixed {
+      .header__logo {
+        width: 28%;
+      }
+    }
+  }
+
+  .header__container {
+    padding-top: 1.5%;
   }
 
   .header__button {
@@ -847,6 +925,10 @@
         padding: 0;
       }
     }
+  }
+
+  .header__box {
+    min-height: 160px;
   }
 
   .header__place {
