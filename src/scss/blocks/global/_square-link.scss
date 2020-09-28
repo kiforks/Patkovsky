@@ -1,0 +1,104 @@
+.square-link {
+  @include center-flex;
+  @include padding-vertical(50px);
+  position: relative;
+  width: 268px;
+  height: 268px;
+  mix-blend-mode: difference;
+
+  @include hover {
+    .square-link__text {
+      @include before-clean {
+        margin-right: 25px;
+      }
+    }
+  }
+
+  @include before {
+    width: 100%;
+    height: 100%;
+    border: 1px solid $color-black-inversion;
+    transform: rotate(45deg);
+  }
+}
+
+.square-link__text {
+  @include triangle(-135deg, $color-black-inversion);
+  @include flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  color: $color-black-inversion;
+
+  @include before-clean {
+    margin-top: -2px;
+  }
+}
+
+.square-link__subtext {
+  display: inline-block;
+  margin-left: 17px;
+}
+
+// <1600px
+@include desktop-middle {
+  .square-link {
+    width: 220px;
+    height: 220px;
+  }
+
+  .square-link__subtext {
+    display: inline-block;
+    margin-left: 15px;
+  }
+}
+
+// <1440px
+@include desktop-small {
+  .square-link {
+    width: 180px;
+    height: 180px;
+  }
+
+  .square-link__subtext {
+    display: inline-block;
+    margin-left: 12px;
+  }
+}
+
+// <1200px
+@include tablet {
+  .square-link {
+    width: 140px;
+    height: 140px;
+  }
+
+  .square-link__subtext {
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+
+// <768px
+@include mobile {
+  .square-link {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 160px;
+    height: 160px;
+    transform: translate(0);
+
+    @include before-clean {
+      border-color: $color-black-3;
+    }
+  }
+
+  .square-link__text {
+    color: $color-black-3;
+
+    @include before-clean {
+      border-color: $color-black-3;
+    }
+  }
+}

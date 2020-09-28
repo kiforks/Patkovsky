@@ -1,20 +1,19 @@
 body {
   @include desktop-middle {
-    font-size: 16px;
-  }
-
-  @include desktop-small {
     font-size: 14px;
   }
 
-  @include tablet {
+  @include desktop-small {
     font-size: 12px;
   }
 
-  //@include mobile {
-  //  font-size: $font-size-mobile;
-  //  line-height: $line-height-mobile;
-  //}
+  @include tablet {
+    font-size: 10px;
+  }
+
+  @include mobile {
+    font-size: 12px;
+  }
 
   @include center-margin;
   position: relative;

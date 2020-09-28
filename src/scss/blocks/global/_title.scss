@@ -9,3 +9,32 @@
 .title__text {
   color: $color-gold;
 }
+
+// <1600px
+@include desktop-middle {
+  .title {
+    font-size: 40px;
+    line-height: 140%;
+  }
+}
+
+// <1440px
+@include desktop-small {
+  .title {
+    font-size: 34px;
+  }
+}
+
+// <1200px
+@include tablet {
+  .title {
+    font-size: 25px;
+  }
+}
+
+// <768px
+@include mobile {
+  .title {
+    font-size: 20px;
+  }
+}

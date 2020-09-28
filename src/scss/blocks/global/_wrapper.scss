@@ -1,11 +1,4 @@
 .wrapper {
-  //Tablet
-  @include tablet {
-    & {
-      @include padding-tablet;
-    }
-  }
-
   //Mobile
   @include mobile {
     & {

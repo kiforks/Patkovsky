@@ -1,5 +1,6 @@
 .button {
   @include focus-color(white);
+  @include transition;
   position: relative;
   display: inline-block;
   min-width: 360px;
@@ -9,43 +10,134 @@
   line-height: 20px;
   text-align: center;
   text-transform: uppercase;
-  @include transition;
+  transition-duration: 0.6s;
 
   @include hover {
-    box-shadow: inset 360px 0 0 0 $color-black;
+    box-shadow: inset 348px 0 0 0 $color-gold;
 
     .button__text {
-      box-shadow: inset 360px 0 0 0 $color-black;
+      box-shadow: inset 348px 0 0 0 $color-gold;
     }
   }
 
-  //@include before-after-hover {
-  //  border-color: transparent;
-  //}
-  //
-  //@include before-after {
-  //  @include transition;
-  //  z-index: -1;
-  //  width: 97.6%;
-  //  height: 90%;
-  //  border: 1px solid $color-black;
-  //}
-  //
-  //@include before-clean {
-  //  top: 0;
-  //  left: 0;
-  //}
-  //
-  //@include after-clean {
-  //  right: -4px;
-  //  bottom: -2px;
-  //}
+  @include before-after-hover {
+    opacity: 0;
+  }
+
+  @include before-after {
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    border: 1px solid $color-black;
+    transition: all 0.6s ease-in;
+  }
+
+  @include before-clean {
+    top: -12px;
+    left: -12px;
+  }
+
+  @include after-clean {
+    right: 0;
+    bottom: 0;
+  }
 }
 
 .button__text {
-  @include transition;
   position: relative;
   z-index: 10;
   display: block;
   padding: 24px 20px;
+  transition-delay: 0.2s;
+  transition-timing-function: ease;
+  transition-duration: 1.5s;
+  transition-property: box-shadow;
+}
+
+// <1600px
+@include desktop-middle {
+  .button {
+    min-width: 300px;
+
+    @include hover {
+      box-shadow: inset 288px 0 0 0 $color-gold;
+
+      .button__text {
+        box-shadow: inset 288px 0 0 0 $color-gold;
+      }
+    }
+  }
+
+  .button__text {
+    padding: 18px 15px;
+  }
+}
+
+// <1440px
+@include desktop-small {
+  .button {
+    min-width: 260px;
+
+    @include hover {
+      box-shadow: inset 248px 0 0 0 $color-gold;
+
+      .button__text {
+        box-shadow: inset 248px 0 0 0 $color-gold;
+      }
+    }
+  }
+
+  .button__text {
+    padding: 16px 12px;
+  }
+}
+
+// <1200px
+@include tablet {
+  .button {
+    min-width: 200px;
+    margin-left: 8px;
+
+    @include hover {
+      box-shadow: inset 188px 0 0 0 $color-gold;
+
+      .button__text {
+        box-shadow: inset 188px 0 0 0 $color-gold;
+      }
+    }
+
+    @include before-clean {
+      top: -8px;
+      left: -8px;
+    }
+  }
+
+  .button__text {
+    padding: 8px;
+  }
+}
+
+// <768px
+@include mobile {
+  .button {
+    min-width: 270px;
+    margin-left: 10px;
+
+    @include hover {
+      box-shadow: inset 260px 0 0 0 $color-gold;
+
+      .button__text {
+        box-shadow: inset 260px 0 0 0 $color-gold;
+      }
+    }
+
+    @include before-clean {
+      top: -10px;
+      left: -10px;
+    }
+  }
+
+  .button__text {
+    padding: 10px;
+  }
 }
