@@ -1,5 +1,5 @@
 .booking__title {
-  margin-bottom: 2.7%;
+  margin-bottom: 2.5%;
   text-align: center;
 }
 
@@ -14,43 +14,3 @@
   line-height: 156%;
   text-align: center;
 }
-
-.booking__input {
-  @include transition;
-  @include reset-input;
-  display: block;
-  width: 100%;
-  font-size: 50px;
-  line-height: 61px;
-  font-family: $font-family-CormorantGaramond;
-  color: $color-black-4;
-  outline: 0;
-}
-
-.booking__inner {
-  @include flex;
-  justify-content: space-between;
-  width: 66.8%;
-  border: 1px solid $color-black;
-}
-
-.booking__input-box {
-  @include flex-column;
-  @include padding-horizon(7%);
-  align-items: center;
-  width: 50%;
-  padding-top: 5%;
-  padding-bottom: 5%;
-}
-
-.booking__label {
-  display: inline-block;
-  margin-bottom: 6%;
-  padding-left: 40px;
-  color: $color-gold;
-  background-image: url('../img/svg/booking/calendar.svg');
-  background-repeat: no-repeat;
-  background-position: 0 center;
-  background-size: 20px;
-}
-

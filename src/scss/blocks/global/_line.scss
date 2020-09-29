@@ -1,0 +1,116 @@
+.line {
+  @include flex;
+  position: absolute;
+  z-index: 10;
+  width: 40px;
+  height: 50%;
+  padding-top: 40px;
+  background-image: url('../img/svg/background-flower.svg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+
+.line__wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.line__image {
+  @include center-transform-horizon;
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 10px;
+  height: 100%;
+
+  @include before {
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 10px;
+    height: 10px;
+    background-color: $color-gold;
+    transform: rotate(45deg);
+  }
+
+  @include after {
+    @include center-transform-horizon;
+    bottom: 0;
+    z-index: 10;
+    width: 1px;
+    height: 95%;
+    background-color: $color-gold;
+  }
+}
+
+// <1600px
+@include desktop-middle {
+  .line {
+    width: 30px;
+    padding-top: 30px;
+  }
+
+  .line__image {
+    width: 8px;
+
+    @include before-clean {
+      width: 8px;
+      height: 8px;
+    }
+
+    @include after-clean {
+      height: 96%;
+    }
+  }
+}
+
+// <1440px
+@include desktop-small {
+  .line {
+    width: 25px;
+    padding-top: 25px;
+  }
+
+  .line__image {
+    width: 7px;
+
+    @include before-clean {
+      width: 7px;
+      height: 7px;
+    }
+
+    @include after-clean {
+      height: 96%;
+    }
+  }
+}
+
+// <1200px
+@include tablet {
+  .line {
+    width: 20px;
+    padding-top: 20px;
+  }
+
+  .line__image {
+    width: 5px;
+
+    @include before-clean {
+      width: 5px;
+      height: 5px;
+    }
+
+    @include after-clean {
+      height: 96%;
+    }
+  }
+}
+
+// <768px
+@include mobile {
+  .line {
+    display: none;
+  }
+}
+

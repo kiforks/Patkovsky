@@ -10,15 +10,9 @@
 
 .details__wrapper {
   @include flex;
-  @include background-flower;
   position: relative;
   z-index: 10;
   justify-content: space-between;
-
-  @include before-clean {
-    @include center-transform-vertical;
-    left: 41.5%;
-  }
 }
 
 .details__picture {
@@ -123,13 +117,6 @@
     height: 551px;
   }
 
-  .details__wrapper {
-    @include before-clean {
-      width: 30px;
-      height: 548px;
-    }
-  }
-
   .details__square-link {
     left: -110px;
   }
@@ -205,6 +192,13 @@
   }
 }
 
+.details__line {
+  position: absolute;
+  top: 15%;
+  left: 42%;
+  height: 79%;
+}
+
 // <1600px
 @include desktop-middle {
   .details__price {
@@ -239,13 +233,6 @@
     height: 531px;
   }
 
-  .details__wrapper {
-    @include before-clean {
-      width: 25px;
-      height: 450px;
-    }
-  }
-
   .details__box {
     margin-top: -55px;
   }
@@ -273,13 +260,6 @@
   .details__inner {
     padding-top: 0;
     padding-right: 0;
-  }
-
-  .details__wrapper {
-    @include before-clean {
-      width: 20px;
-      height: 300px;
-    }
   }
 
   .details__photo {
@@ -343,10 +323,6 @@
 
   .details__wrapper {
     margin-bottom: 25px;
-
-    @include before-clean {
-      display: none;
-    }
   }
 
   .details__photo {

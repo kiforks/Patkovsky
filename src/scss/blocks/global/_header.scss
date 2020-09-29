@@ -732,7 +732,7 @@
     &--active,
     &--hide {
       .header__container {
-        padding-bottom: 3%;
+        padding-bottom: 2.2%;
       }
     }
 
@@ -744,18 +744,18 @@
   }
 
   .header__box {
-    min-height: 150px;
+    min-height: 130px;
 
     &--fixed {
       .header__logo {
-        width: 22%;
+        width: 20%;
       }
     }
   }
 
   .header__container {
     min-height: auto;
-    padding-top: 3%;
+    padding-top: 2.2%;
   }
 
   .header__button {
@@ -764,6 +764,10 @@
 
   .header__label {
     margin-right: 40px;
+  }
+
+  .header__logo {
+    width: 25%;
   }
 
   .header__icon {
@@ -850,6 +854,10 @@
     &--active {
       margin-left: 8px;
     }
+  }
+
+  .header__logo {
+    width: 31%;
   }
 }
 

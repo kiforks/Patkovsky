@@ -32,6 +32,7 @@
 // JS
 'js/aos',
 'js/flatpickr_confetti',
+'js/select_dropdown',
 
 // Blocks
   /* global */
@@ -47,8 +48,11 @@
 'blocks/global/preloader',
 'blocks/global/parallax',
 'blocks/global/square-link',
+'blocks/global/line',
+
 
   /* main */
 'blocks/main',
 'blocks/details',
-'blocks/booking';
+'blocks/booking',
+'blocks/video';
