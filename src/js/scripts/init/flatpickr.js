@@ -5,16 +5,16 @@ function flatpickInit() {
   const dateToCheckIn = flatpickr(checkIn, {
     dateFormat: "d-m-Y",
     locale: 'uk',
-    altInput: true,
-    altFormat: "F j, Y",
+    // altInput: true,
+    // altFormat: "F j, Y",
     minDate: "today",
   });
 
   const dateToCheckOut = flatpickr(checkOut, {
     dateFormat: "d-m-Y",
     locale: 'uk',
-    altInput: true,
-    altFormat: "F j, Y",
+    // altInput: true,
+    // altFormat: "F j, Y",
     minDate: "today",
   });
 }

@@ -9,11 +9,11 @@ function initVideoControl() {
 
   videoButton.addEventListener('click', () => {
     if(videoPlay) {
-      videoButton.classList.add('video__button--paused');
+      videoButton.classList.remove('video__button--paused');
       video.pause();
       videoPlay = false;
     } else {
-      videoButton.classList.remove('video__button--paused');
+      videoButton.classList.add('video__button--paused');
       video.play();
       videoPlay = true;
     }

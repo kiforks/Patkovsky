@@ -22,14 +22,54 @@ $mt-triangle: -6px;
 
 @mixin triangle-after {
   @include after {
-    @include center-transform-vertical;
-    right: 0;
-    width: 24px;
-    height: 24px;
-    border: 1px solid $color-black-4;
+    @include transition;
+    top: 28%;
+    right: 18%;
+    width: 12px;
+    height: 12px;
+    border: 1px solid $color-black;
     border-bottom: 0;
     border-right: 0;
     transform: rotate(-135deg);
+  }
+
+  // <1600px
+  @include desktop-middle {
+    @include after-clean {
+      top: 41%;
+      right: 18%;
+      width: 9px;
+      height: 9px;
+    }
+  }
+
+  // <1440px
+  @include desktop-small {
+    @include after-clean {
+      top: 36%;
+      right: 19%;
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  // <1200px
+  @include tablet {
+    @include after-clean {
+      right: 13%;
+      width: 5px;
+      height: 5px;
+    }
+  }
+
+  // <768px
+  @include mobile {
+    @include after-clean {
+      top: 27%;
+      right: 0;
+      width: 10px;
+      height: 10px;
+    }
   }
 }
 

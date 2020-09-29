@@ -1,6 +1,7 @@
+
 document.addEventListener('DOMContentLoaded', createSelect, false);
 function createSelect() {
-  var select = document.getElementsByTagName('select'),
+  var select = document.querySelectorAll('.select-dropdown'),
     liElement,
     ulElement,
     optionValue,
@@ -10,10 +11,9 @@ function createSelect() {
     elementParentSpan;
 
   for (var select_i = 0, len = select.length; select_i < len; select_i++) {
-    //console.log('selects init');
 
     select[select_i].style.display = 'none';
-    wrapElement(document.getElementById(select[select_i].id), document.createElement('div'), select_i, select[select_i].getAttribute('placeholder-text'));
+    wrapElement(document.getElementById(select[select_i].id), document.createElement('div'), select_i, select[select_i].getAttribute('data-placeholder'));
 
     for (var i = 0; i < select[select_i].options.length; i++) {
       liElement = document.createElement("li");

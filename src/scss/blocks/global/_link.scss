@@ -5,8 +5,10 @@
   @include padding-horizon(27px, 21px);
   display: flex;
   align-items: center;
+  max-height: 67px;
   font-weight: bold;
   font-size: 22px;
+  font-family: $font-family-cormorant;
   color: white;
   background-color: $color-gold;
 
