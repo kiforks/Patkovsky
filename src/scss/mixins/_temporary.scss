@@ -21,9 +21,16 @@ $mt-triangle: -6px;
 }
 
 @mixin triangle-after {
+  &.open {
+    @include after-clean {
+      top: 47%;
+      transform: rotate(45deg);
+    }
+  }
+
   @include after {
     @include transition;
-    top: 28%;
+    top: 36%;
     right: 18%;
     width: 12px;
     height: 12px;

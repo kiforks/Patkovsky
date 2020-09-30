@@ -320,10 +320,6 @@
   }
 }
 
-.header__languages-link {
-  cursor: pointer;
-}
-
 .header__box {
   @include transition;
   position: fixed;
@@ -580,6 +576,7 @@
 
 .header__languages-link {
   @include focus-color($color-gold);
+  cursor: pointer;
 }
 
 .header__languages-content {
