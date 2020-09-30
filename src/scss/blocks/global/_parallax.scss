@@ -1,6 +1,5 @@
 .parallax {
   position: absolute;
-  top: 0;
   left: 0;
   z-index: 10;
   width: 100%;
@@ -8,8 +7,15 @@
 
   &--owl {
     @include flex;
+    top: 0;
     justify-content: flex-end;
     padding-top: 32.2%;
+  }
+
+  &--deer {
+    bottom: 0;
+    z-index: 11;
+    height: 200%;
   }
 }
 
@@ -17,6 +23,13 @@
   &--owl {
     width: 19%;
     height: 100%;
+  }
+
+  &--deer {
+    width: 100%;
+    height: 100%;
+    margin-right: 25%;
+    margin-left: auto;
   }
 }
 
@@ -32,6 +45,13 @@
     background-image: url('../img/main/global/owl.png');
     background-position: top 0 left -88px;
     transform: scale(-1, 1);
+  }
+
+  &--deer {
+    height: 100%;
+    background-image: url('../img/main/global/deer.png');
+    background-position: top 0 left 130%;
+    background-size: 76%;
   }
 }
 
@@ -53,6 +73,10 @@
 
 // <768px
 @include mobile {
+  .parallax {
+    display: none;
+  }
+
   .parallax__wrapper {
     width: 50%;
   }

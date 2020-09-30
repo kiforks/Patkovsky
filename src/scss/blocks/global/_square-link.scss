@@ -82,7 +82,7 @@
 // <768px
 @include mobile {
   .square-link {
-    @include margin-vertical(60px);
+    @include margin-vertical(75px);
     position: relative;
     top: 0;
     left: 0;

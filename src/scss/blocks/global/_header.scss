@@ -39,6 +39,7 @@
 
   &--active,
   &--hide {
+    background-color: $color-black;
     background-image: none;
 
     @include after-clean {

@@ -10,35 +10,35 @@
 
 .main__architecture {
   position: relative;
-  top: -260px;
   z-index: 10;
+  margin-top: -260px;
 }
 
 // <1600px
 @include desktop-middle {
   .main__architecture {
-    top: -200px;
+    margin-top: -200px;
   }
 }
 
 // <1440px
 @include desktop-small {
   .main__architecture {
-    top: -150px;
+    margin-top: -150px;
   }
 }
 
 // <1200px
 @include tablet {
   .main__architecture {
-    top: -130px;
+    margin-top: -130px;
   }
 }
 
 // <768px
 @include mobile {
   .main__architecture {
-    top: 0;
+    margin-top: 0;
   }
 }
 

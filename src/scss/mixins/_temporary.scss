@@ -80,4 +80,22 @@ $mt-triangle: -6px;
   }
 }
 
+@mixin photo-element {
+  & {
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 59%;
+    height: 17%;
+    background-color: white;
+  }
+
+  // <768px
+  @include mobile {
+    & {
+      display: none;
+    }
+  }
+}
+
 

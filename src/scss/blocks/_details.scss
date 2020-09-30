@@ -1,6 +1,10 @@
 .details {
   padding-top: 5.42%;
   padding-bottom: 9%;
+
+  &--building {
+    padding-top: 0;
+  }
 }
 
 .details__container {
@@ -34,8 +38,8 @@
 
 .details__inner {
   width: 53.3%;
-  padding-top: 8.87%;
-  padding-right: 14%;
+  padding-top: 8.7%;
+  padding-right: 13.8%;
 }
 
 .details__title {
@@ -71,13 +75,10 @@
   height: 738px;
   margin-left: auto;
 
-  @include before {
-    top: 0;
-    left: 0;
-    z-index: 10;
-    width: 59%;
-    height: 17%;
-    background-color: white;
+  &--acquaintance {
+    @include before {
+      @include photo-element;
+    }
   }
 }
 
@@ -127,7 +128,7 @@
   position: absolute;
   bottom: 2.5%;
   left: 0;
-  z-index: 9;
+  z-index: 1000;
   width: 100%;
 }
 
@@ -197,6 +198,23 @@
   top: 15%;
   left: 42%;
   height: 79%;
+}
+
+.details__photo-element {
+  @include photo-element;
+  position: absolute;
+}
+
+.details__additionally {
+  @include flex-column;
+  justify-content: flex-end;
+  width: 33%;
+  padding-bottom: 4.8%;
+  padding-left: 2%;
+}
+
+.details__additionally-description {
+  @include reset-margin-text;
 }
 
 // <1600px
@@ -330,10 +348,6 @@
     justify-content: center;
     width: 100%;
     height: auto;
-
-    @include before-clean {
-      display: none;
-    }
   }
 
   .details__photo-box {
@@ -355,6 +369,12 @@
 
   .details__price-box {
     position: static;
+  }
+
+  .details__additionally {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0;
   }
 }
 
