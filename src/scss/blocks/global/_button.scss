@@ -41,6 +41,20 @@
     right: 0;
     bottom: 0;
   }
+
+  &--white {
+    @include hover {
+      color: $color-black;
+    }
+
+    @include active {
+      color: $color-black;
+    }
+
+    @include before-after-clean {
+      border-color: white;
+    }
+  }
 }
 
 .button__text {

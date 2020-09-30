@@ -1,1 +1,71 @@
+<section class="main__room room">
+  <div class="room__wrapper wrapper">
+    <div class="room__characteristics">
+      <p class="room__description">Двомісний номер</p>
+      <h3 class="room__subtitle">Однокімнатний півлюкс (двоспальне ліжко)</h3>
+      <ul class="room__list">
+        <li class="room__item">Два гостя</li>
+        <li class="room__item room__item--area">Площа 44 м2</li>
+        <li class="room__item room__item--rooms">Одна кімната + тераса</li>
+      </ul>
 
+      <include src="src/html/blocks/button/room/_characteristics.html"></include>
+
+    </div>
+
+    <div class="room__container">
+
+        <include src="src/html/blocks/title/_room.html"></include>
+
+      <!-- Swiper -->
+      <div class="room__box swiper-container">
+        <ul class="room__gallery swiper-wrapper swiper-no-swiping">
+          <li class="room__gallery-item swiper-slide">
+            <!-- Swiper 2 -->
+            <div class="swiper-container gallery-top">
+              <div class="swiper-wrapper">
+                <div class="test swiper-slide" >1</div>
+                <div class="test swiper-slide" >2</div>
+                <div class="test swiper-slide" >3</div>
+                <div class="test swiper-slide" >4</div>
+                <div class="test swiper-slide" >5</div>
+                <div class="test swiper-slide" >6</div>
+                <div class="test swiper-slide" >7</div>
+                <div class="test swiper-slide" >8</div>
+                <div class="test swiper-slide" >9</div>
+                <div class="test swiper-slide" >10</div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="swiper-container gallery-thumbs">
+              <div class="swiper-wrapper">
+                <div class="test swiper-slide" >1</div>
+                <div class="test swiper-slide" >2</div>
+                <div class="test swiper-slide" >3</div>
+                <div class="test swiper-slide" >4</div>
+                <div class="test swiper-slide" >5</div>
+                <div class="test swiper-slide" >6</div>
+                <div class="test swiper-slide" >7</div>
+                <div class="test swiper-slide" >8</div>
+                <div class="test swiper-slide" >9</div>
+                <div class="test swiper-slide" >10</div>
+              </div>
+            </div>
+          </li>
+          <li class="room__gallery-item swiper-slide">Slide 2</li>
+          <li class="room__gallery-item swiper-slide">Slide 3</li>
+        </ul>
+      </div>
+
+      <div class="room__button-wrapper">
+
+        <include src="src/html/blocks/slider-button/_room.html"></include>
+
+        <include src="src/html/blocks/button/room/_gallery.html"></include>
+
+      </div>
+
+    </div>
+  </div>
+</section>

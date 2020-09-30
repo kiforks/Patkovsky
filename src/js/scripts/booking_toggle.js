@@ -12,17 +12,28 @@ function toggleTriangle() {
       const active = input.querySelector('.active');
       const buttons = document.querySelectorAll('.select-dropdown__button');
 
-      if(!active && !active.closest('.select-dropdown')) {
+      try {
+        active.closest('.select-dropdown');
+      } catch {
+        return;
+      }
+
+      if(!active) {
         buttons.forEach(button => button.classList.remove('open'));
 
         return;
       }
 
       const targetSelect = active.closest('.select-dropdown');
-      const targetButton = targetSelect.querySelector('.select-dropdown__button');
 
-      if(active) {
-        targetButton.classList.add('open');
+      try {
+        const targetButton = targetSelect.querySelector('.select-dropdown__button');
+
+        if(active) {
+          targetButton.classList.add('open');
+        }
+      } catch {
+        return;
       }
     })
   })
