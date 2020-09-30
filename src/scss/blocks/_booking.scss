@@ -1,4 +1,7 @@
 .booking {
+  padding-top: 9.8%;
+  background-color: $color-beige;
+
   /* width */
   ::-webkit-scrollbar {
     width: 5px;
@@ -34,6 +37,7 @@
     padding: 0 0 5px $select-padding;
     font-size: 30px;
     line-height: 120%;
+    background-color: $color-beige;
     border: 0;
 
     @include hover {
@@ -48,7 +52,7 @@
     margin-right: -1px;
     margin-left: -1px;
     overflow-y: scroll;
-    background-color: white;
+    background-color: $color-beige;
     border: 1px solid $color-black;
     border-top: 0;
   }
@@ -129,6 +133,7 @@
   line-height: 34px;
   font-family: $font-family-CormorantGaramond;
   color: $color-black;
+  background-color: $color-beige;
   background-image: url('../img/svg/booking/calendar.svg');
   background-repeat: no-repeat;
   background-position: left center;

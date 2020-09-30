@@ -9,6 +9,28 @@
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: contain;
+
+  &--horizon {
+    position: relative;
+    justify-content: center;
+    width: 97.2%;
+    height: 40px;
+    padding-top: 0;
+    background-image: none;
+  }
+}
+
+.line__background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  transform: rotate(90deg);
+  background-image: url('../img/svg/background-flower.svg');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
 }
 
 .line__wrapper {
@@ -42,25 +64,64 @@
     height: 95%;
     background-color: $color-gold;
   }
+
+  &--horizon {
+    display: block;
+    width: 100%;
+
+    @include before-clean {
+      top: 50%;
+      right: 50px;
+      left: auto;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    @include after-clean {
+      bottom: auto;
+      top: 50%;
+      left: 0;
+      width: 95%;
+      height: 1px;
+      transform: translate(0, -50%);
+    }
+  }
 }
 
 // <1600px
 @include desktop-middle {
   .line {
+    &:not(.line--horizon) {
+      width: 30px;
+      padding-top: 30px;
+    }
+
+    &--horizon {
+      height: 30px;
+    }
+  }
+
+  .line__background {
     width: 30px;
-    padding-top: 30px;
   }
 
   .line__image {
-    width: 8px;
+    &:not(.line__image--horizon) {
+      width: 8px;
+
+      @include after-clean {
+        height: 96%;
+      }
+    }
 
     @include before-clean {
       width: 8px;
       height: 8px;
     }
 
-    @include after-clean {
-      height: 96%;
+    &--horizon {
+      @include before-clean {
+        right: 35px;
+      }
     }
   }
 }
@@ -68,20 +129,32 @@
 // <1440px
 @include desktop-small {
   .line {
+    &:not(.line--horizon) {
+      width: 25px;
+      padding-top: 25px;
+    }
+
+    &--horizon {
+      height: 25px;
+    }
+  }
+
+  .line__background {
     width: 25px;
-    padding-top: 25px;
   }
 
   .line__image {
-    width: 7px;
+    &:not(.line__image--horizon) {
+      width: 7px;
+
+      @include after-clean {
+        height: 96%;
+      }
+    }
 
     @include before-clean {
       width: 7px;
       height: 7px;
-    }
-
-    @include after-clean {
-      height: 96%;
     }
   }
 }
@@ -89,20 +162,30 @@
 // <1200px
 @include tablet {
   .line {
-    width: 20px;
-    padding-top: 20px;
+    &:not(.line--horizon) {
+      width: 20px;
+      padding-top: 20px;
+    }
   }
 
   .line__image {
-    width: 5px;
-
-    @include before-clean {
+    &:not(.line__image--horizon) {
       width: 5px;
-      height: 5px;
+
+      @include before-clean {
+        width: 5px;
+        height: 5px;
+      }
+
+      @include after-clean {
+        height: 96%;
+      }
     }
 
-    @include after-clean {
-      height: 96%;
+    &--horizon {
+      @include after-clean {
+        width: 92%;
+      }
     }
   }
 }
@@ -110,7 +193,17 @@
 // <768px
 @include mobile {
   .line {
-    display: none;
+    &:not(.line--horizon) {
+      display: none;
+    }
+  }
+
+  .line__image {
+    &--horizon {
+      @include after-clean {
+        width: 87%;
+      }
+    }
   }
 }
 

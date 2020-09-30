@@ -4,6 +4,7 @@ src/scss/mixins/**/*
 src/scss/variables/**/*
 src/scss/js/**/*
 src/scss/template.scss
+src/scss/blocks/global/_line.scss
 libs/**/*
 **/*.css
 

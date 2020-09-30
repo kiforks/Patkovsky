@@ -1,0 +1,78 @@
+.architecture__container {
+  @include padding-horizon(13.5%);
+  @include center-margin;
+  position: relative;
+  width: 84.6%;
+  padding-top: 5%;
+  padding-bottom: 4%;
+  background-color: white;
+
+  @include after {
+    @include center-transform-horizon;
+    content: 'Концепт';
+    top: 5%;
+    z-index: 1;
+    font-size: 165px;
+    line-height: 120%;
+    font-family: $font-family-cormorant;
+    color: $color-beige;
+  }
+}
+
+.architecture__description {
+  @include reset-margin-text;
+}
+
+.architecture__description,
+.architecture__title {
+  text-align: center;
+}
+
+.architecture__title {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 4%;
+}
+
+.architecture__line {
+  margin-bottom: 2.3%;
+}
+
+// <1600px
+@include desktop-middle {
+  .architecture__container {
+    @include after-clean {
+      font-size: 130px;
+    }
+  }
+}
+
+// <1440px
+@include desktop-small {
+  .architecture__container {
+    @include after-clean {
+      font-size: 115px;
+    }
+  }
+}
+
+// <1200px
+@include tablet {
+  .architecture__container {
+    @include after-clean {
+      font-size: 80px;
+    }
+  }
+}
+
+// <768px
+@include mobile {
+  .architecture__container {
+    @include padding-mobile;
+    width: 100%;
+
+    @include after-clean {
+      font-size: 50px;
+    }
+  }
+}
