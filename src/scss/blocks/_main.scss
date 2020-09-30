@@ -6,6 +6,10 @@
 .main__details {
   position: relative;
   margin-bottom: 3.7%;
+
+  &--building {
+    margin-bottom: 0;
+  }
 }
 
 .main__architecture {
