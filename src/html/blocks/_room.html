@@ -4,7 +4,7 @@
       <p class="room__description">Двомісний номер</p>
       <h3 class="room__subtitle">Однокімнатний півлюкс (двоспальне ліжко)</h3>
       <ul class="room__list">
-        <li class="room__item">Два гостя</li>
+        <li class="room__item room__item--guests">Два гостя</li>
         <li class="room__item room__item--area">Площа 44 м2</li>
         <li class="room__item room__item--rooms">Одна кімната + тераса</li>
       </ul>
@@ -18,45 +18,137 @@
         <include src="src/html/blocks/title/_room.html"></include>
 
       <!-- Swiper -->
-      <div class="room__box swiper-container">
+      <section class="room__box swiper-container">
+        <h2 class="visually-hidden">Галерея</h2>
         <ul class="room__gallery swiper-wrapper swiper-no-swiping">
           <li class="room__gallery-item swiper-slide">
+
+            <!-- Порядок слайдів повинен співпадати у обох блоках -->
+
             <!-- Swiper 2 -->
-            <div class="swiper-container gallery-top">
-              <div class="swiper-wrapper">
-                <div class="test swiper-slide" >1</div>
-                <div class="test swiper-slide" >2</div>
-                <div class="test swiper-slide" >3</div>
-                <div class="test swiper-slide" >4</div>
-                <div class="test swiper-slide" >5</div>
-                <div class="test swiper-slide" >6</div>
-                <div class="test swiper-slide" >7</div>
-                <div class="test swiper-slide" >8</div>
-                <div class="test swiper-slide" >9</div>
-                <div class="test swiper-slide" >10</div>
-              </div>
+            <div class="room__photos swiper-container">
+              <ul class="room__photo-list swiper-wrapper">
+                <li class="room__photo swiper-slide">
+                  <img src="img/main/room/gallery/photo-1.jpg" alt="Фото інтер'єру" class="room__image">
+                </li>
+                <li class="room__photo swiper-slide">
+                  <img src="img/main/room/gallery/photo-2.jpg" alt="Фото інтер'єру" class="room__image">
+                </li>
+                <li class="room__photo swiper-slide">
+                  <img src="img/main/room/gallery/photo-3.jpg" alt="Фото інтер'єру" class="room__image">
+                </li>
+                <li class="room__photo swiper-slide">
+                  <img src="img/main/room/gallery/photo-4.jpg" alt="Фото інтер'єру" class="room__image">
+                </li>
+              </ul>
               <!-- Add Pagination -->
-              <div class="swiper-pagination"></div>
+              <include src="src/html/blocks/pagination/_room.html"></include>
             </div>
-            <div class="swiper-container gallery-thumbs">
-              <div class="swiper-wrapper">
-                <div class="test swiper-slide" >1</div>
-                <div class="test swiper-slide" >2</div>
-                <div class="test swiper-slide" >3</div>
-                <div class="test swiper-slide" >4</div>
-                <div class="test swiper-slide" >5</div>
-                <div class="test swiper-slide" >6</div>
-                <div class="test swiper-slide" >7</div>
-                <div class="test swiper-slide" >8</div>
-                <div class="test swiper-slide" >9</div>
-                <div class="test swiper-slide" >10</div>
-              </div>
+
+            <!-- Thumbs -->
+            <div class="room__thumbs swiper-container" aria-hidden="true">
+              <ul class="room__thumb-list swiper-wrapper">
+                <li class="room__thumb swiper-slide">
+                  <img src="img/main/room/gallery/photo-1.jpg" alt="Фото інтер'єру" class="room__image">
+                </li>
+                <li class="room__thumb swiper-slide">
+                  <img src="img/main/room/gallery/photo-2.jpg" alt="Фото інтер'єру" class="room__image">
+                </li>
+                <li class="room__thumb swiper-slide">
+                  <img src="img/main/room/gallery/photo-3.jpg" alt="Фото інтер'єру" class="room__image">
+                </li>
+                <li class="room__thumb swiper-slide">
+                  <img src="img/main/room/gallery/photo-4.jpg" alt="Фото інтер'єру" class="room__image">
+                </li>
+              </ul>
             </div>
           </li>
-          <li class="room__gallery-item swiper-slide">Slide 2</li>
-          <li class="room__gallery-item swiper-slide">Slide 3</li>
+          <li class="room__gallery-item swiper-slide">
+
+            <!-- Порядок слайдів повинен співпадати у обох блоках -->
+
+            <!-- Swiper 2 -->
+            <div class="room__photos swiper-container">
+              <ul class="room__photo-list swiper-wrapper">
+                <li class="room__photo swiper-slide">
+                  <img src="img/main/room/gallery/photo-4.jpg" alt="Фото інтер'єру" class="room__image">
+                </li>
+                <li class="room__photo swiper-slide">
+                  <img src="img/main/room/gallery/photo-3.jpg" alt="Фото інтер'єру" class="room__image">
+                </li>
+                <li class="room__photo swiper-slide">
+                  <img src="img/main/room/gallery/photo-2.jpg" alt="Фото інтер'єру" class="room__image">
+                </li>
+                <li class="room__photo swiper-slide">
+                  <img src="img/main/room/gallery/photo-1.jpg" alt="Фото інтер'єру" class="room__image">
+                </li>
+              </ul>
+              <!-- Add Pagination -->
+              <include src="src/html/blocks/pagination/_room.html"></include>
+            </div>
+
+            <!-- Thumbs -->
+            <div class="room__thumbs swiper-container" aria-hidden="true">
+              <ul class="room__thumb-list swiper-wrapper">
+                <li class="room__thumb swiper-slide">
+                  <img src="img/main/room/gallery/photo-4.jpg" alt="Фото інтер'єру" class="room__image">
+                </li>
+                <li class="room__thumb swiper-slide">
+                  <img src="img/main/room/gallery/photo-3.jpg" alt="Фото інтер'єру" class="room__image">
+                </li>
+                <li class="room__thumb swiper-slide">
+                  <img src="img/main/room/gallery/photo-2.jpg" alt="Фото інтер'єру" class="room__image">
+                </li>
+                <li class="room__thumb swiper-slide">
+                  <img src="img/main/room/gallery/photo-1.jpg" alt="Фото інтер'єру" class="room__image">
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="room__gallery-item swiper-slide">
+
+            <!-- Порядок слайдів повинен співпадати у обох блоках -->
+
+            <!-- Swiper 2 -->
+            <div class="room__photos swiper-container">
+              <ul class="room__photo-list swiper-wrapper">
+                <li class="room__photo swiper-slide">
+                  <img src="img/main/room/gallery/photo-4.jpg" alt="Фото інтер'єру" class="room__image">
+                </li>
+                <li class="room__photo swiper-slide">
+                  <img src="img/main/room/gallery/photo-3.jpg" alt="Фото інтер'єру" class="room__image">
+                </li>
+                <li class="room__photo swiper-slide">
+                  <img src="img/main/room/gallery/photo-2.jpg" alt="Фото інтер'єру" class="room__image">
+                </li>
+                <li class="room__photo swiper-slide">
+                  <img src="img/main/room/gallery/photo-1.jpg" alt="Фото інтер'єру" class="room__image">
+                </li>
+              </ul>
+              <!-- Add Pagination -->
+              <include src="src/html/blocks/pagination/_room.html"></include>
+            </div>
+
+            <!-- Thumbs -->
+            <div class="room__thumbs swiper-container" aria-hidden="true">
+              <ul class="room__thumb-list swiper-wrapper">
+                <li class="room__thumb swiper-slide">
+                  <img src="img/main/room/gallery/photo-4.jpg" alt="Фото інтер'єру" class="room__image">
+                </li>
+                <li class="room__thumb swiper-slide">
+                  <img src="img/main/room/gallery/photo-3.jpg" alt="Фото інтер'єру" class="room__image">
+                </li>
+                <li class="room__thumb swiper-slide">
+                  <img src="img/main/room/gallery/photo-2.jpg" alt="Фото інтер'єру" class="room__image">
+                </li>
+                <li class="room__thumb swiper-slide">
+                  <img src="img/main/room/gallery/photo-1.jpg" alt="Фото інтер'єру" class="room__image">
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
-      </div>
+      </section>
 
       <div class="room__button-wrapper">
 

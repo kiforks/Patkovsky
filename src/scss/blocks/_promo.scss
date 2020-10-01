@@ -1,0 +1,202 @@
+.promo__container {
+  padding-right: 5.3%;
+}
+
+.promo__wrapper {
+  position: relative;
+  padding-bottom: 1.7%;
+}
+
+.promo__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.promo__title {
+  position: relative;
+  width: 50%;
+  margin-bottom: 1.6%;
+  padding-top: 0.6%;
+
+  @include after-text;
+
+  @include after-clean {
+    content: 'Знижки';
+    top: -94%;
+    left: 0;
+    z-index: 0;
+    transform: translate(0);
+  }
+
+  span {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.promo__line {
+  width: 34.5%;
+  margin-bottom: 32%;
+}
+
+.promo__line-image {
+  @include after-clean {
+    width: 91%;
+  }
+}
+
+.promo__box {
+  @include flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 46.6%;
+  margin-left: auto;
+  padding-right: 2%;
+}
+
+.promo__list {
+  @include reset-list;
+}
+
+.promo__photo-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.promo__photo-list {
+  @include flex;
+  @include reset-list;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.promo__photo-item {
+  @include flex;
+  position: relative;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 47%;
+  height: 595px;
+  padding-bottom: 1.5%;
+  overflow: hidden;
+
+  &--video {
+    align-self: flex-end;
+  }
+}
+
+.promo__video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  @include hover {
+    .promo__video-button {
+      opacity: 0.7;
+    }
+  }
+}
+
+.promo__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.promo__info,
+.promo__description {
+  position: relative;
+  z-index: 10;
+}
+
+.promo__description {
+  @include flex;
+  @include reset-margin-text;
+  align-items: center;
+  width: 82.4%;
+  font-size: 36px;
+  line-height: 44px;
+  font-family: $font-family-cormorant;
+  color: $color-black-4;
+}
+
+.promo__info {
+  @include flex;
+  justify-content: space-between;
+  width: 97%;
+  background-color: white;
+}
+
+.promo__picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.promo__image {
+  @include object-fit(cover);
+}
+
+.promo__video-wrapper,
+.promo__picture {
+  @include before {
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.2;
+  }
+}
+
+.promo__date {
+  display: block;
+  font-size: 50px;
+  line-height: 100%;
+  font-family: $font-family-cormorant;
+  color: $color-gold;
+}
+
+.promo__time {
+  @include reset-margin-text;
+  position: relative;
+  display: block;
+  width: 10%;
+  padding-bottom: 2%;
+  padding-left: 3%;
+  font-size: 12px;
+  line-height: 170%;
+
+  @include before {
+    @include center-transform-vertical;
+    right: 0;
+    width: 1px;
+    height: 80%;
+    background-color: $color-black;
+  }
+}
+
+// <768px
+@include mobile {
+  .promo__title {
+    @include after-clean {
+      top: -40px;
+    }
+  }
+}
+

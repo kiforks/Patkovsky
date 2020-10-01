@@ -25,32 +25,7 @@
 }
 
 .video__button {
-  @include center-transform;
-  @include transition;
-  @include reset-button;
-  position: absolute;
-  z-index: 1000;
-  width: 0;
-  height: 74px;
-  border-width: 37px 0 37px 60px;
-  border-style: solid;
-  border-color: transparent transparent transparent white;
-  outline: 0;
-  cursor: pointer;
-  opacity: 0;
-
-  @include hover {
-    opacity: 0.5;
-  }
-
-  @include active {
-    opacity: 0.3;
-  }
-
-  &--paused {
-    border-width: 0 0 0 60px;
-    border-style: double;
-  }
+  @include video-button;
 }
 
 // <1600px

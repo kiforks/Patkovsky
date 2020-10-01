@@ -98,4 +98,66 @@ $mt-triangle: -6px;
   }
 }
 
+@mixin after-text {
+  @include after {
+    @include center-transform-horizon;
+    z-index: 1;
+    font-size: 165px;
+    line-height: 120%;
+    font-family: $font-family-cormorant;
+    color: $color-beige;
+  }
+
+  // <1600px
+  @include desktop-middle {
+    @include after-clean {
+      font-size: 130px;
+    }
+  }
+
+  // <1440px
+  @include desktop-small {
+    @include after-clean {
+      font-size: 115px;
+    }
+  }
+
+  // <1200px
+  @include tablet {
+    @include after-clean {
+      font-size: 80px;
+    }
+  }
+}
+
+@mixin video-button {
+  @include active-opacity;
+  @include center-transform;
+  @include transition;
+  @include reset-button;
+  position: absolute;
+  z-index: 1000;
+  width: 0;
+  height: 74px;
+  border-width: 37px 0 37px 60px;
+  border-style: solid;
+  border-color: transparent transparent transparent white;
+  outline: 0;
+  cursor: pointer;
+  opacity: 0;
+
+  @include hover {
+    opacity: 0.5;
+  }
+
+  @include active {
+    opacity: 0.3;
+  }
+
+  &--paused {
+    border-width: 0 0 0 60px;
+    border-style: double;
+  }
+}
+
 

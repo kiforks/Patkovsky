@@ -18,6 +18,10 @@
   margin-top: -260px;
 }
 
+.main__room {
+  margin-bottom: 10.5%;
+}
+
 // <1600px
 @include desktop-middle {
   .main__architecture {

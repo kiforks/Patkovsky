@@ -3,6 +3,10 @@ const mainRoom = new Swiper('.room__box', {
   fadeEffect: {
     crossFade: true
   },
+  cubeEffect: {
+    slideShadows: false,
+    shadow: false
+  },
   navigation: {
     nextEl: '.room__gallery-button--next',
     prevEl: '.room__gallery-button--prev',
@@ -11,27 +15,56 @@ const mainRoom = new Swiper('.room__box', {
   noSwiping: true
 });
 
-const galleryThumbs = new Swiper('.gallery-thumbs', {
-  spaceBetween: 10,
-  slidesPerView: 4,
-  loop: true,
-  freeMode: true,
-  loopedSlides: 5, //looped slides should be the same
-  watchSlidesVisibility: true,
-  watchSlidesProgress: true,
-  noSwiping: false
+const promoSwiper = new Swiper('.promo__inner', {
+  spaceBetween: 0,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+  navigation: {
+    nextEl: '.promo__button--next',
+    prevEl: '.promo__button--prev',
+  },
 });
 
-const galleryTop = new Swiper('.gallery-top', {
-  spaceBetween: 10,
-  loop: true,
-  loopedSlides: 5, //looped slides should be the same
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  thumbs: {
-    swiper: galleryThumbs,
-  },
-  noSwiping: false
-});
+// Gallery
+const roomItem = document.querySelectorAll('.room__gallery-item');
+
+roomItem.forEach((item, index) => {
+  const thumbs = new Swiper(item.querySelector('.room__thumbs'), {
+    direction: 'horizontal',
+    spaceBetween: 6,
+    slidesPerView: 3,
+    speed: 900,
+    freeMode: true,
+    loopedSlides: 5, //looped slides should be the same
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    noSwiping: false,
+    mousewheel: true,
+    breakpoints: {
+      768: {
+        direction: 'vertical'
+      }
+    }
+  });
+
+  const slider = new Swiper(item.querySelector('.room__photos'), {
+    spaceBetween: 6,
+    speed: 900,
+    pagination: {
+      el: item.querySelector('.room__pagination-list'),
+      clickable: true,
+      bulletClass: 'pagination__item',
+      bulletActiveClass: 'pagination__item--active',
+      bulletElement: 'li'
+    },
+    noSwiping: false,
+    autoplay: true,
+    thumbs: {
+      swiper: thumbs,
+    },
+  });
+})
+
+

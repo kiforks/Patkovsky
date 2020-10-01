@@ -6,9 +6,9 @@
 }
 
 .slider-button__item {
-  @include reset-button;
   @include transition;
   @include focus-scale();
+  @include reset-button;
   position: relative;
   width: 60px;
   height: 60px;
@@ -49,7 +49,7 @@
   }
 
   &--prev {
-    margin-right: 25px;
+    margin-right: 35px;
 
     @include before-clean {
       left: 21px;
@@ -83,3 +83,60 @@
     }
   }
 }
+
+// <1600px
+@include desktop-middle {
+  .slider-button__item {
+    width: 45px;
+    height: 45px;
+
+    @include before-clean {
+      top: 17px;
+      width: 12px;
+      height: 12px;
+    }
+
+    &--prev {
+      margin-right: 25px;
+
+      @include before-clean {
+        left: 19px;
+      }
+    }
+
+    &--next {
+      @include before-clean {
+        right: 19px;
+      }
+    }
+  }
+}
+
+// <1200px
+@include tablet {
+  .slider-button__item {
+    width: 35px;
+    height: 35px;
+
+    @include before-clean {
+      top: 15px;
+      width: 8px;
+      height: 8px;
+    }
+
+    &--prev {
+      margin-right: 20px;
+
+      @include before-clean {
+        left: 15px;
+      }
+    }
+
+    &--next {
+      @include before-clean {
+        right: 15px;
+      }
+    }
+  }
+}
+
