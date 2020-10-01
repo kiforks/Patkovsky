@@ -327,7 +327,8 @@
   }
 
   .room__button-wrapper {
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     padding: 0;
   }
 }

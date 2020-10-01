@@ -25,7 +25,30 @@ const promoSwiper = new Swiper('.promo__inner', {
     nextEl: '.promo__button--next',
     prevEl: '.promo__button--prev',
   },
+  noSwiping: true,
 });
+
+// Promo
+const promoSlides = document.querySelectorAll('.promo__item');
+
+
+if(window.screen.width < 768) {
+  promoSlides.forEach(slide => {
+    const promoSwiper = new Swiper(slide.querySelector('.promo__photo-wrapper'), {
+      slidesPerView: 1,
+      spaceBetween: 6,
+      speed: 900,
+      pagination: {
+        el: slide.querySelector('.promo__pagination'),
+        clickable: true,
+        bulletClass: 'pagination__item',
+        bulletActiveClass: 'pagination__item--active',
+        bulletElement: 'li'
+      },
+      noSwiping: false,
+    });
+  })
+}
 
 // Gallery
 const roomItem = document.querySelectorAll('.room__gallery-item');
