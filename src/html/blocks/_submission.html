@@ -1,15 +1,20 @@
 <section class="main__submission submission">
-  <div class="submission__container">
+  <div class="submission__wrapper">
+    <div class="submission__container">
 
-    <include src="src/html/blocks/title/_submission.html"></include>
+      <include src="src/html/blocks/title/_submission.html"></include>
 
-    <p class="submission__description">Вкажіть нижче свій e-mail, щоб отримувати свіжі новини та акційні пропозиції  від нашого готелю</p>
+      <p class="submission__description">Вкажіть нижче свій e-mail, щоб отримувати свіжі новини та акційні пропозиції  від нашого готелю</p>
 
-    <form action="post" class="submission__form">
-      <p class="submission__inner">
-        <label for="submission__email" class="submission__label">Ваш e-mail</label>
-        <input type="email" class="submission__input" id="submission__email" placeholder="example@gmail.com">
-      </p>
-    </form>
+      <form action="post" class="submission__form">
+        <p class="submission__inner">
+          <label for="submission__email" class="submission__label">Ваш e-mail</label>
+          <input type="email" class="submission__input" id="submission__email" placeholder="example@gmail.com">
+        </p>
+
+        <include src="src/html/blocks/form-button/_submission.html"></include>
+
+      </form>
+    </div>
   </div>
 </section>

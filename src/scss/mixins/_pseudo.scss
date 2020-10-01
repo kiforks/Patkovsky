@@ -208,18 +208,22 @@
   /* Placeholder */
 @mixin placeholder {
   &::-webkit-input-placeholder {
+    font: inherit;
     @content;
   }
 
   &:-moz-placeholder {
+    font: inherit;
     @content;
   }
 
   &::-moz-placeholder {
+    font: inherit;
     @content;
   }
 
   &:-ms-input-placeholder {
+    font: inherit;
     @content;
   }
 }
