@@ -111,7 +111,7 @@ function html() {
     .pipe(posthtml([
       include()
     ]))
-    .pipe(htmlValidator())
+    // .pipe(htmlValidator())
     .pipe(bemValidator())
     .pipe(dest(path.build.uncompressed.html))
     .pipe(htmlmin({

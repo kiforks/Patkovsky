@@ -1,17 +1,14 @@
 function parallaxInit() {
-  let differentValue = 140;
+  let differentValue = 120;
 
   if(window.screen.width < 1440) {
-    differentValue = 120;
-  }
-
-  if(window.screen.width < 1200) {
-    differentValue = 100;
+    differentValue = 75;
   }
 
   const parallaxItem = document.querySelector('.parallax--deer');
   const parallaxImageDeer = document.querySelector('.parallax__image--deer');
   const detailsPhoto = document.querySelector('.details__photo--building');
+  const headerBox = document.querySelector('.header__box');
   const parallaxItemPositionTop = window.pageYOffset + parallaxItem.getBoundingClientRect().top - differentValue;
   const detailsPositionBottom = window.pageYOffset + detailsPhoto.getBoundingClientRect().bottom - differentValue;
 

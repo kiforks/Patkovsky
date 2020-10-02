@@ -1,0 +1,239 @@
+.footer {
+  position: relative;
+  padding-bottom: 3.7%;
+  color: white;
+  background-color: $color-black;
+}
+
+.footer__container {
+  @include flex;
+  @include padding-horizon(18.7%);
+  justify-content: space-between;
+  padding-top: 3.5%;
+}
+
+.footer__wrapper {
+  @include flex;
+  align-content: flex-start;
+  max-width: 32%;
+  margin-bottom: 3.5%;
+
+  &--reception,
+  &--booking {
+    padding-top: 0.8%;
+  }
+
+  &--booking {
+    padding-left: 6.7%;
+  }
+
+  &--reception {
+    padding-left: 12%;
+  }
+}
+
+.footer__icon {
+  @include transition;
+  display: inline-block;
+  fill: $color-gold;
+
+  &--map,
+  &--message,
+  &--phone {
+    margin-right: 15px;
+  }
+
+  &--map {
+    animation: pulsate 2s ease-out;
+    animation-iteration-count: infinite;
+  }
+
+  &--socials {
+    @include hover {
+      transform: scale($hover-scale);
+      fill: white;
+    }
+
+    @include active {
+      transform: scale($down-scale);
+    }
+  }
+
+  &--phone {
+    animation: phone-vibrate  5s ease infinite;
+  }
+}
+
+.footer__place {
+  margin-bottom: 6%;
+}
+
+.footer__email {
+  margin-bottom: 8%;
+}
+
+.footer__place,
+.footer__email,
+.footer__contacts {
+  @include flex;
+  align-items: center;
+}
+
+.footer__socials {
+  @include flex;
+  @include reset-list;
+  justify-content: space-between;
+  align-self: flex-start;
+  padding-left: 2%;
+}
+
+.footer__socials-item {
+  margin-right: 42px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.footer__contacts {
+  @include reset-margin-text;
+  width: 100%;
+  margin-bottom: 8%;
+  padding-left: 2%;
+  font-size: 18px;
+  line-height: 20px;
+  color: $color-gold;
+  text-transform: uppercase;
+}
+
+.footer__phone-item {
+  margin-bottom: 2%;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.footer__email,
+.footer__phone-link,
+.footer__place {
+  @include focus-color($color-gold);
+}
+
+.footer__phones {
+  @include reset-list;
+  padding-left: 19%;
+}
+
+.footer__description,
+.footer__copyright {
+  @include reset-margin-text;
+  width: 100%;
+  font-size: 12px;
+  line-height: 217%;
+  text-align: center;
+}
+
+.footer__description {
+  margin-bottom: 3%;
+}
+
+.footer__copyright {
+  color: $color-gold;
+}
+
+.footer__button-up {
+  right: 2.7%;
+  bottom: 16%;
+}
+
+// <1600px
+@include desktop-middle {
+  .footer__contacts {
+    font-size: inherit;
+    line-height: 110%;
+  }
+
+  .footer__icon--map,
+  .footer__icon--message,
+  .footer__icon--phone {
+    margin-right: 10px;
+  }
+}
+
+// <1440px
+@include desktop-small {
+  .footer__button-up {
+    right: $tablet-padding;
+    bottom: 15px;
+  }
+}
+
+// <1200px
+@include tablet {
+  .footer__container {
+    @include padding-tablet;
+  }
+}
+
+// <768px
+@include mobile {
+  .footer {
+    @include padding-vertical(30px, 140px);
+    font-size: 14px;
+  }
+
+  .footer__container {
+    @include padding-mobile;
+  }
+
+  .footer__wrapper {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+
+    &--booking,
+    &--reception {
+      margin-bottom: 30px;
+    }
+  }
+
+  .footer__socials {
+    @include center-margin;
+    margin-bottom: 20px;
+    padding-left: 0;
+  }
+
+  .footer__place {
+    margin-bottom: 20px;
+  }
+
+  .footer__email {
+    margin-bottom: 35px;
+  }
+
+  .footer__contacts {
+    margin-bottom: 15px;
+    padding-left: 0;
+  }
+
+  .footer__phones {
+    padding-left: 30px;
+  }
+
+  .footer__phone-item {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .footer__description {
+    margin-bottom: 25px;
+    font-size: 14px;
+  }
+
+  .footer__button-up {
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+  }
+}
+
