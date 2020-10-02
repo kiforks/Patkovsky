@@ -1,0 +1,96 @@
+<header class="header" id="header">
+
+  <div class="header__video">
+    <video src="video/video.mp4" preload="auto" loop muted autoplay class="header__movie"></video>
+  </div>
+
+  <div class="header__box">
+    <div class="header__container container">
+
+      <div class="header__wrapper">
+        <button class="header__button" aria-haspopup="true" aria-controls="menu" aria-labelledby="header__label" id="header__button">
+          <span class="visually-hidden">Відкрити/закрити навігаційне меню</span>
+        </button>
+        <p class="header__label header__label--open" id="header__label">Меню</p>
+        <p class="header__label header__label--closed">Закрити</p>
+
+        <div class="header__logo preloader-logo">
+          <img src="img/svg/header/logo.svg" width="471" height="224" alt="Hotel patkovski" class="header__image">
+        </div>
+
+        <section class="header__weather">
+          <h4 class="visually-hidden">Погода</h4>
+          <!--SVG-->
+          <svg class="header__icon header__icon--weather" width="50" height="40" >
+            <use xlink:href="#icon-weather"></use>
+          </svg>
+          <p class="header__temperature">+17</p>
+        </section>
+
+        <!--                            ICONS                     -->
+        <include src="src/html/blocks/_icons.html"></include>
+      </div>
+
+      <div class="header__languages" role="list">
+        <div class="header__languages-item header__languages-item--active" role="listitem">
+          <a class="header__languages-link">Укр</a>
+        </div>
+        <div class="header__languages-content">
+          <div class="header__languages-item" role="listitem">
+            <a href="#" class="header__languages-link">EN</a>
+          </div>
+          <div class="header__languages-item" role="listitem">
+            <a href="#" class="header__languages-link">RU</a>
+          </div>
+        </div>
+      </div>
+
+      <nav class="header__navigation">
+        <ul class="header__list" id="menu" role="menu">
+          <li class="header__item" role="none">
+            <a href="#" class="header__link" role="menuitem">НОМЕРИ</a>
+          </li>
+          <li class="header__item" role="none">
+            <a href="#" class="header__link" role="menuitem">ПРО НАС</a>
+          </li>
+          <li class="header__item" role="none">
+            <a href="#" class="header__link" role="menuitem">ЦІНИ</a>
+          </li>
+          <li class="header__item" role="none">
+            <a href="#" class="header__link" role="menuitem">ГАЛЕРЕЯ</a>
+          </li>
+          <li class="header__item" role="none">
+            <a href="#" class="header__link" role="menuitem">АКЦІЇ</a>
+          </li>
+          <li class="header__item" role="none">
+            <a href="#" class="header__link" role="menuitem">КОНФЕРЕНЦІЇ & СЕМІНАРИ</a>
+          </li>
+          <li class="header__item" role="none">
+            <a href="#" class="header__link" role="menuitem">КОНТАКТИ</a>
+          </li>
+          <li class="header__item" role="none">
+            <a href="#" class="header__link" role="menuitem">ХАРЧУВАННЯ</a>
+          </li>
+          <li class="header__item header__item--reservation" role="none">
+            <include src="src/html/blocks/link/_header.html"></include>
+          </li>
+          <li class="header__item" role="none">
+            <a href="#" class="header__link" role="menuitem">РОЗВАГИ</a>
+          </li>
+        </ul>
+      </nav>
+
+      <a href="https://goo.gl/maps/zaovBzai66qyU6GD9" class="header__place" target="_blank">
+        <!--SVG-->
+        <svg class="header__icon header__icon--map" width="20" height="25" >
+          <use xlink:href="#icon-track"></use>
+        </svg>
+        БУКОВЕЛЬ, с. ПОЛЯНИЦЯ
+      </a>
+
+    </div>
+  </div>
+
+  <a href="#details" class="header__down scroll">Більше</a>
+
+</header>

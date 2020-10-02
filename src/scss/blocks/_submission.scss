@@ -29,13 +29,11 @@
 }
 
 .submission__container {
-  @include padding-horizon(10.6%);
   @include center-margin;
   position: relative;
   z-index: 10;
   width: 62.5%;
-  padding-top: 5%;
-  padding-bottom: 5.8%;
+  padding: 5% 10.6% 5.4%;
   background-color: $color-black;
 }
 
@@ -55,7 +53,7 @@
 
 .submission__inner {
   @include reset-margin-text;
-  width: 80%;
+  width: 84%;
 }
 
 .submission__label,
@@ -73,11 +71,13 @@
 .submission__input {
   @include reset-input;
   width: 100%;
+  padding-bottom: 5px;
   font-size: 36px;
   line-height: 44px;
   font-family: $font-family-cormorant;
   color: white;
   background-color: transparent;
+  border-bottom: 1px solid white;
 
   @include placeholder {
     color: white;
@@ -112,6 +112,7 @@
 // <1200px
 @include tablet {
   .submission__input {
+    padding-bottom: 3px;
     font-size: 16px;
   }
 }
@@ -139,5 +140,9 @@
 
   .submission__description {
     margin-bottom: 25px;
+  }
+
+  .submission__inner {
+    width: 75%;
   }
 }

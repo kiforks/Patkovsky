@@ -163,12 +163,30 @@
 
 // <768px
 @include mobile {
+  .offer {
+    margin-bottom: 15px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
   .offer__item {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 206px;
+    height: 209px;
     margin-bottom: 15px;
+    padding-bottom: 0;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &--news {
+      align-items: flex-end;
+      padding-bottom: 10px;
+    }
   }
 
   .offer__inner {
@@ -177,8 +195,8 @@
 
   .offer__time {
     width: auto;
-    min-width: 17%;
-    max-width: 21%;
+    min-width: 20%;
+    max-width: 24%;
   }
 
   .offer__description {

@@ -1,0 +1,153 @@
+.pages__list {
+  @include flex;
+  @include reset-list;
+  align-items: center;
+}
+
+.pages__item {
+  margin-right: 20px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &--active {
+    @include center-flex;
+    position: relative;
+    width: 85px;
+    height: 85px;
+
+    @include after {
+      op: 9px;
+      left: 13px;
+      width: 60px;
+      height: 60px;
+      border: 1px solid $color-gold;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.pages__link {
+  @include focus-color($color-gold);
+
+  &--active,
+  &--points {
+    cursor: default;
+
+    @include hover {
+      color: $color-black;
+    }
+
+    @include active {
+      transform: scale(0);
+      opacity: 1;
+    }
+  }
+}
+
+.pages__button {
+  align-self: flex-start;
+}
+
+// <1600px
+@include desktop-middle {
+  .pages__item {
+    margin-right: 15px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &--active {
+      width: 60px;
+      height: 60px;
+
+      @include after-clean {
+        left: 8px;
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+}
+
+// <1440px
+@include desktop-small {
+  .pages__item {
+    margin-right: 12px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &--active {
+      width: 50px;
+      height: 50px;
+
+      @include after-clean {
+        left: 8px;
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+}
+
+// <1200px
+@include tablet {
+  .pages__item {
+    margin-right: 10px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &--active {
+      width: 40px;
+      height: 40px;
+
+      @include after-clean {
+        left: 7px;
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+  .pages__button {
+    min-width: 160px;
+  }
+}
+
+// <768px
+@include mobile {
+  .pages {
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  .pages__list {
+    margin-bottom: 25px;
+  }
+
+  .pages__item {
+    margin-right: 20px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &--active {
+      width: 60px;
+      height: 60px;
+
+      @include after-clean {
+        left: 8px;
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+}
+

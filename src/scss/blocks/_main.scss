@@ -2,6 +2,10 @@
   position: relative;
   z-index: 1;
   margin-bottom: 6.5%;
+
+  &--news {
+    padding-top: 239px;
+  }
 }
 
 .main__details {
@@ -27,8 +31,18 @@
   margin-bottom: 7%;
 }
 
+.main__news {
+  margin-bottom: 6.7%;
+}
+
 // <1600px
 @include desktop-middle {
+  .main {
+    &--news {
+      padding-top: 200px;
+    }
+  }
+
   .main__architecture {
     margin-top: -200px;
   }
@@ -36,6 +50,12 @@
 
 // <1440px
 @include desktop-small {
+  .main {
+    &--news {
+      padding-top: 175px;
+    }
+  }
+
   .main__architecture {
     margin-top: -150px;
   }
@@ -43,6 +63,12 @@
 
 // <1200px
 @include tablet {
+  .main {
+    &--news {
+      padding-top: 140px;
+    }
+  }
+
   .main__architecture {
     margin-top: -130px;
   }
@@ -50,6 +76,12 @@
 
 // <768px
 @include mobile {
+  .main {
+    &--news {
+      padding-top: 200px;
+    }
+  }
+
   .main__architecture {
     margin-top: 0;
   }
