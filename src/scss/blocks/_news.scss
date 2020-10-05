@@ -8,38 +8,7 @@
 }
 
 .news__navigation-list {
-  @include flex;
-  @include reset-list;
   margin-bottom: 6.5%;
-}
-
-.news__navigation-item {
-  &--active {
-    position: relative;
-    margin-right: 17px;
-    padding-right: 23px;
-    color: $color-gold;
-
-    @include before {
-      top: 50%;
-      right: 0;
-      width: 8px;
-      height: 8px;
-      border: 1px solid $color-gold;
-      border-top: 0;
-      border-left: 0;
-      transform: translateY(-50%) rotate(-45deg);
-    }
-  }
-}
-
-.news__navigation-link {
-  cursor: default;
-
-  &--active {
-    @include focus-opacity;
-    cursor: pointer;
-  }
 }
 
 .news__line {
@@ -59,7 +28,20 @@
 }
 
 .news__title {
+  position: relative;
   margin-bottom: 1.7%;
+
+  @include after-text {
+    content: 'Знижки';
+    top: -119%;
+    left: 0;
+    transform: translate(0);
+  }
+
+  span {
+    position: relative;
+    z-index: 10;
+  }
 }
 
 .news__wrapper {

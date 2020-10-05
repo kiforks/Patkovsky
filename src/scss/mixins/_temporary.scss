@@ -101,6 +101,7 @@ $mt-triangle: -6px;
 @mixin after-text {
   @include after {
     @include center-transform-horizon;
+    @content;
     z-index: 1;
     font-size: 165px;
     line-height: 120%;

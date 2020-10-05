@@ -1,0 +1,270 @@
+.promotions__navigation-list {
+  margin-bottom: 8%;
+}
+
+.promotions__title {
+  position: relative;
+  width: 80%;
+  font-family: $font-family-cormorant;
+
+  @include after-text {
+    left: 0;
+    transform: translate(0);
+  }
+
+  &--buy {
+    @include after-clean {
+      content: 'Ми дивуємо';
+      top: -146%;
+    }
+  }
+
+  &--discount {
+    @include after-clean {
+      content: 'Знижки -50%';
+      top: -70px;
+      font-size: 155px;
+    }
+  }
+
+  span {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.promotions__container {
+  padding-left: 2.7%;
+}
+
+.promotions__wrapper {
+  position: relative;
+  padding-left: 5.3%;
+
+  &--buy {
+    margin-bottom: 9.7%;
+  }
+
+  &--discount {
+    .promotions__line {
+      height: 47%;
+    }
+  }
+}
+
+.promotions__line {
+  top: -4%;
+  left: 0;
+  height: 64%;
+}
+
+.promotions__title-box {
+  @include flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 3%;
+  padding-right: 2%;
+
+  &--discount {
+    margin-bottom: 3.1%;
+  }
+}
+
+.promotions__date {
+  @include reset-margin-text;
+  line-height: 100%;
+  font-family: $font-family-cormorant;
+}
+
+.promotions__number {
+  display: block;
+  margin-bottom: 26%;
+  font-size: 50px;
+  color: $color-gold;
+}
+
+.promotions__description {
+  @include reset-margin-text;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 2%;
+}
+
+.promotions__description,
+.promotions__list {
+  width: 74%;
+}
+
+.promotions__box {
+  @include flex;
+  @include reset-margin-text;
+  align-content: flex-end;
+  width: 33%;
+}
+
+.promotions__inner {
+  @include flex;
+  position: relative;
+  z-index: 1;
+  justify-content: space-between;
+  margin-top: -7.6%;
+
+  &--discount {
+    margin-top: -5%;
+  }
+}
+
+.promotions__picture {
+  position: relative;
+  width: 61.3%;
+  height: 738px;
+
+  @include before {
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 59%;
+    height: 17%;
+    background-color: white;
+  }
+}
+
+.promotions__image {
+  @include object-fit(cover);
+}
+
+.promotions__period-date {
+  display: block;
+  width: 100%;
+}
+
+.promotions__period-description {
+  margin-bottom: 6%;
+}
+
+.promotions__discount {
+  color: $color-gold;
+}
+
+.promotions__list {
+  @include reset-list;
+  position: relative;
+  z-index: 10;
+  padding-left: 0.4%;
+}
+
+.promotions__item {
+  margin-bottom: 2.8%;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.promotions__socials-description {
+  @include reset-margin-text;
+  margin-right: 10%;
+}
+
+.promotions__socials-container {
+  @include flex;
+  justify-content: space-between;
+}
+
+.promotions__socials {
+  align-items: center;
+}
+
+// <1600px
+@include desktop-middle {
+  .promotions__picture {
+    height: 552px;
+  }
+}
+
+// <1440px
+@include desktop-small {
+  .promotions__picture {
+    height: 459px;
+  }
+
+  .promotions__box {
+    &--socials {
+      width: 38%;
+    }
+  }
+}
+
+// <1200px
+@include tablet {
+  .promotions__picture {
+    height: 291px;
+  }
+
+  .promotions__socials-description {
+    margin-bottom: 10px;
+  }
+}
+
+// <768px
+@include mobile {
+  .promotions__wrapper {
+    padding-left: 0;
+  }
+
+  .promotions__navigation-list {
+    margin-bottom: 15px;
+  }
+
+  .promotions__title-box {
+    margin-bottom: 20px;
+  }
+
+  .promotions__description {
+    width: 100%;
+    margin-bottom: 10px;
+
+    &--picture {
+      margin-bottom: 20px;
+    }
+  }
+
+  .promotions__inner {
+    margin-top: 0;
+  }
+
+  .promotions__title {
+    @include after-clean {
+      top: 11px;
+      font-size: 44px;
+      line-height: 30px;
+    }
+  }
+
+  .promotions__box {
+    width: 100%;
+  }
+
+  .promotions__picture {
+    order: -1;
+    width: 100%;
+    margin-bottom: 15px;
+
+    @include before-clean {
+      display: none;
+    }
+  }
+
+  .promotions__socials-description {
+    @include center-margin;
+  }
+
+  .promotions__number {
+    font-size: 40px;
+  }
+
+  .promotions__list {
+    margin-bottom: 15px;
+  }
+}

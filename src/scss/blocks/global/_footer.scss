@@ -48,17 +48,6 @@
     animation-iteration-count: infinite;
   }
 
-  &--socials {
-    @include hover {
-      transform: scale($hover-scale);
-      fill: white;
-    }
-
-    @include active {
-      transform: scale($down-scale);
-    }
-  }
-
   &--phone {
     animation: phone-vibrate  5s ease infinite;
   }
@@ -80,19 +69,7 @@
 }
 
 .footer__socials {
-  @include flex;
-  @include reset-list;
-  justify-content: space-between;
-  align-self: flex-start;
   padding-left: 2%;
-}
-
-.footer__socials-item {
-  margin-right: 42px;
-
-  &:last-of-type {
-    margin-right: 0;
-  }
 }
 
 .footer__contacts {
@@ -199,9 +176,7 @@
   }
 
   .footer__socials {
-    @include center-margin;
     margin-bottom: 20px;
-    padding-left: 0;
   }
 
   .footer__place {

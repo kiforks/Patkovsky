@@ -1,0 +1,66 @@
+.socials {
+  @include flex;
+  @include reset-list;
+  justify-content: space-between;
+  align-self: flex-start;
+}
+
+.socials__item {
+  margin-right: 42px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.socials__icon {
+  @include transition;
+  fill: $color-gold;
+
+  @include hover {
+    transform: scale($hover-scale);
+  }
+
+  @include active {
+    transform: scale($down-scale);
+    opacity: $down-opacity;
+  }
+}
+
+// <1600px
+@include desktop-middle {
+  .socials__item {
+    margin-right: 35px;
+  }
+}
+
+// <1440px
+@include desktop-small {
+  .socials__item {
+    margin-right: 30px;
+  }
+
+  .promotions__socials-description {
+    margin-right: 4%;
+  }
+}
+
+// <1200px
+@include tablet {
+  .socials__item {
+    margin-right: 25px;
+  }
+}
+
+// <768px
+@include mobile {
+  .socials {
+    @include center-margin;
+    padding-left: 0;
+  }
+
+  .socials__item {
+    margin-right: 45px;
+  }
+}
+
