@@ -68,3 +68,12 @@
   }
 }
 
+
+// <768px
+@include mobile {
+  .button-up {
+    position: static;
+    transform: translate(0) rotate(180deg);
+  }
+}
+

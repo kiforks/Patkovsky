@@ -1,6 +1,7 @@
 .footer {
   position: relative;
   padding-bottom: 3.7%;
+  overflow: hidden;
   color: white;
   background-color: $color-black;
 }
@@ -156,12 +157,13 @@
 // <768px
 @include mobile {
   .footer {
-    @include padding-vertical(30px, 140px);
+    @include padding-vertical(30px);
     font-size: 14px;
   }
 
   .footer__container {
     @include padding-mobile;
+    margin-bottom: 15px;
   }
 
   .footer__wrapper {
@@ -206,9 +208,9 @@
     font-size: 14px;
   }
 
-  .footer__button-up {
-    left: 50%;
-    transform: translateX(-50%) rotate(180deg);
+  .footer__button-up-container {
+    @include flex;
+    justify-content: center;
   }
 }
 

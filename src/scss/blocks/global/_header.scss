@@ -752,6 +752,14 @@
       .header__container {
         padding-bottom: 0;
       }
+
+      .header__navigation {
+        @include padding-vertical(4%);
+      }
+
+      .header__place {
+        padding-bottom: 30px;
+      }
     }
 
     &--hide {
