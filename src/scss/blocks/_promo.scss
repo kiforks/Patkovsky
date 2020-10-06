@@ -83,6 +83,22 @@
   cursor: pointer;
   pointer-events: auto !important;
 
+  @include hover {
+    .promo__picture {
+      @include before-clean {
+        background-color: $color-gold;
+        box-shadow: inset 0 0 16px 8px $color-black-4;
+      }
+    }
+
+    .promo__video-wrapper {
+      @include before-clean {
+        background-color: $color-gold;
+        box-shadow: inset 0 0 16px 8px $color-black-4;
+      }
+    }
+  }
+
   &--video {
     align-self: flex-end;
   }
