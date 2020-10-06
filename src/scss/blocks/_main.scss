@@ -3,8 +3,7 @@
   z-index: 1;
   margin-bottom: 6.5%;
 
-  &--news,
-  &--promotions {
+  &--pages {
     padding-top: 239px;
   }
 
@@ -45,8 +44,7 @@
 // <1600px
 @include desktop-middle {
   .main {
-    &--news,
-    &--promotions {
+    &--pages {
       padding-top: 200px;
     }
   }
@@ -59,8 +57,7 @@
 // <1440px
 @include desktop-small {
   .main {
-    &--news,
-    &--promotions {
+    &--pages {
       padding-top: 175px;
     }
   }
@@ -73,8 +70,7 @@
 // <1200px
 @include tablet {
   .main {
-    &--news,
-    &--promotions {
+    &--pages {
       padding-top: 140px;
     }
   }
@@ -87,9 +83,8 @@
 // <768px
 @include mobile {
   .main {
-    &--news,
-    &--promotions {
-      padding-top: 200px;
+    &--pages {
+      padding-top: 90px;
     }
   }
 
