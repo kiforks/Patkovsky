@@ -5,6 +5,7 @@
   z-index: 10;
   width: 100%;
   height: 100%;
+  font-family: $font-family-cormorant;
   background-color: rgba(255, 255, 255, 0.8);
   visibility: visible;
   opacity: 1;
@@ -154,6 +155,11 @@
 
   .preloader__description {
     margin-bottom: 25px;
+  }
+
+  .preloader-logo {
+    top: 20px;
+    width: 80% !important;
   }
 
   .preloader__picture {

@@ -254,9 +254,10 @@
   .room__characteristics {
     @include flex;
     justify-content: center;
+    order: 5;
     width: 100%;
-    margin-bottom: 30px;
     padding: 25px 10px;
+    background-position: right top;
   }
 
   .room__subtitle {
@@ -290,6 +291,7 @@
 
   .room__container {
     width: 100%;
+    margin-bottom: 20px;
     padding: 0;
   }
 
@@ -329,6 +331,10 @@
   .room__button-wrapper {
     flex-direction: column;
     align-items: center;
+    padding: 0;
+  }
+
+  .room__wrapper {
     padding: 0;
   }
 }

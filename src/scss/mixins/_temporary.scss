@@ -129,6 +129,13 @@ $mt-triangle: -6px;
       font-size: 80px;
     }
   }
+
+  // <768px
+  @include mobile {
+    @include after-clean {
+      display: none;
+    }
+  }
 }
 
 @mixin video-button {

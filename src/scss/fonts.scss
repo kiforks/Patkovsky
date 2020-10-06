@@ -6,8 +6,6 @@
 */
 
 @include font-face('CormorantGaramond', '../fonts/CormorantGaramond-Regular');
-@include font-face('EBGaramond', '../fonts/EBGaramond-Regular');
+@include font-face('CormorantGaramond', '../fonts/CormorantGaramond-Bold', bold);
 @include font-face('Comfortaa', '../fonts/Comfortaa-Regular');
-@include font-face('Cormorant', '../fonts/Cormorant-Regular');
-@include font-face('Cormorant', '../fonts/Cormorant-Bold', bold, normal);
 

@@ -1,11 +1,10 @@
 .link {
   @include triangle();
   @include transition;
-  @include padding-vertical(20px);
-  @include padding-horizon(27px, 21px);
   display: flex;
   align-items: center;
   max-height: 67px;
+  padding: 20px 27px 20px 21px;
   font-weight: bold;
   font-size: 22px;
   font-family: $font-family-cormorant;
@@ -30,7 +29,8 @@
 }
 
 .link__text {
-  display: inline-block;
+  display: flex;
+  align-items: center;
   margin-left: 19px;
 }
 

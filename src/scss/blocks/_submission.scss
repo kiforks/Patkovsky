@@ -35,6 +35,10 @@
   width: 62.5%;
   padding: 5% 10.6% 5.4%;
   background-color: $color-black;
+  background-image: url('../img/main/submission/background.png');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: contain;
 }
 
 .submission__description {
@@ -127,11 +131,7 @@
 
   .submission__container {
     width: 100%;
-    padding: 20px 10px;
-  }
-
-  .submission__wrapper {
-    @include padding-mobile;
+    padding: 20px 20px;
   }
 
   .submission__title {

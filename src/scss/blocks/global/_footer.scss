@@ -167,6 +167,7 @@
   }
 
   .footer__wrapper {
+    justify-content: center;
     width: 100%;
     max-width: 100%;
     padding: 0;
@@ -190,12 +191,14 @@
   }
 
   .footer__contacts {
+    @include flex;
+    justify-content: center;
     margin-bottom: 15px;
     padding-left: 0;
   }
 
   .footer__phones {
-    padding-left: 30px;
+    padding-left: 0;
   }
 
   .footer__phone-item {

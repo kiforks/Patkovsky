@@ -34,11 +34,24 @@
   margin-bottom: 2.3%;
 }
 
+// <1200px
+@include tablet {
+  .architecture__line {
+    @include after-clean {
+      width: 91%;
+    }
+  }
+}
+
 
 // <768px
 @include mobile {
   .architecture__container {
     @include padding-mobile;
     width: 100%;
+
+    @include after-clean {
+      top: 0;
+    }
   }
 }

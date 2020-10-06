@@ -523,7 +523,7 @@
   font-size: 18px;
   line-height: 22px;
   text-align: center;
-  color: $color-gray;
+  color: $color-gold;
   background-color: white;
   border-radius: 50%;
 
@@ -892,10 +892,12 @@
       .header__item {
         width: 100%;
         font-size: 18px;
+        transform: translateX(0) scale(1);
+        opacity: 1;
 
         &--reservation {
           @media (max-height: 620px) {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
           }
 
           margin-bottom: 25px;
@@ -912,11 +914,36 @@
       }
 
       .header__wrapper {
+        flex-grow: 1;
+        justify-content: space-between;
+        width: auto;
         margin-bottom: 0;
       }
 
       .header__place {
         margin-top: 20px;
+      }
+
+      .header__languages {
+        position: static;
+        color: white;
+        opacity: 1;
+
+        @include before-clean {
+          border-color: white;
+        }
+      }
+
+      .header__link {
+        &--reservation {
+          position: static;
+          opacity: 1;
+        }
+      }
+
+      .header__weather {
+        position: static;
+        opacity: 1;
       }
     }
 
@@ -926,15 +953,13 @@
         max-width: 100%;
       }
 
-      .header__logo {
-        position: static;
-      }
-
       .header__wrapper {
         margin-bottom: 10px;
       }
 
       .header__item {
+        opacity: 0;
+
         &--reservation {
           margin-bottom: 0;
         }
@@ -943,12 +968,38 @@
       .header__navigation {
         padding: 0;
       }
+
+      .header__weather {
+        position: absolute;
+        top: -250px;
+        opacity: 0;
+      }
+
+      .header__languages {
+        position: relative;
+        top: 0;
+        opacity: 0;
+      }
+
+      .header__link {
+        &--reservation {
+          position: absolute;
+          top: -250px;
+          transform: translateX(0) scale(0);
+          opacity: 0;
+        }
+      }
     }
   }
 
   .header__box {
-    min-height: 160px;
-    padding-bottom: 15px;
+    min-height: 0;
+
+    &--fixed {
+      .header__logo {
+        width: 60%;
+      }
+    }
   }
 
   .header__place {
@@ -959,11 +1010,14 @@
 
   .header__item {
     @media (max-height: 620px) {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
+    left: 0;
     justify-content: center;
     margin-bottom: 25px;
+    transform: translateX(0) scale(0);
+    opacity: 0;
 
     &--reservation {
       max-height: 40px;
@@ -972,7 +1026,7 @@
 
     &:nth-of-type(even) {
       @media (max-height: 620px) {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
       }
 
       margin-bottom: 25px;
@@ -984,14 +1038,16 @@
     @include transition;
     justify-content: stretch;
     align-self: flex-start;
-    width: 100%;
+    width: 30%;
     max-width: 100%;
-    margin-bottom: 10px;
+    min-height: 80px;
   }
 
-  .header__wrapper,
   .header__navigation {
+    @include transition;
     max-width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .header__label {
@@ -999,45 +1055,60 @@
   }
 
   .header__logo {
-    position: static;
-    flex-grow: 1;
-    height: 85px;
-    transform: translateX(0);
+    width: 60%;
   }
 
   .header__container {
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-content: space-between;
     padding-top: 10px;
   }
 
   .header__button {
     width: 30px;
-    height: 15px;
+    height: 10px;
   }
 
   .header__icon {
     &--weather {
       width: 35px;
       height: 30px;
+      filter: invert(1);
     }
   }
 
+  .header__temperature {
+    color: white;
+  }
+
   .header__languages {
-    margin-right: auto;
-    margin-left: 0;
+    @include transition;
+    position: absolute;
+    top: -250px;
+    margin-right: 0;
+    margin-left: 15px;
+    opacity: 0;
+
+    @include before-hover {
+      margin-top: 5px;
+    }
   }
 
   .header__link {
     &--reservation {
+      position: absolute;
+      top: -250px;
       font-size: inherit;
+      background-color: transparent;
+      opacity: 0;
     }
   }
 
-  .header__navigation {
+  .header__weather {
     @include transition;
-    margin-top: auto;
-    margin-bottom: auto;
+    position: absolute;
+    top: -250px;
+    opacity: 0;
   }
 }

@@ -18,6 +18,8 @@
   margin-bottom: 3.7%;
 
   &--building {
+    position: relative;
+    z-index: 10000;
     margin-bottom: 0;
   }
 }

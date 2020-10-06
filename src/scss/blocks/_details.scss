@@ -43,7 +43,33 @@
 }
 
 .details__title {
+  position: relative;
   margin-bottom: 8%;
+
+  @include after-text;
+
+  &--acquaintance {
+    @include after-clean {
+      content: 'Про нас';
+      top: -117%;
+      left: -2%;
+      transform: translate(0);
+    }
+  }
+
+  &--building {
+    @include after-clean {
+      content: 'Конструктив';
+      top: -117%;
+      left: -2%;
+      transform: translate(0);
+    }
+  }
+
+  span {
+    position: relative;
+    z-index: 10;
+  }
 }
 
 .details__description {
@@ -100,7 +126,7 @@
 
 .details__square-link {
   position: absolute;
-  top: 25%;
+  top: 24.5%;
   left: -134px;
   z-index: 100;
 }
@@ -108,6 +134,7 @@
 .details__photo-item {
   @include object-fit(cover);
 }
+
 
 // <1600px
 @include desktop-middle {
@@ -313,6 +340,10 @@
   .details__additionally {
     width: 30%;
   }
+
+  .details__line {
+    top: 0;
+  }
 }
 
 // <768px
@@ -330,6 +361,11 @@
 
   .details__title {
     margin-bottom: 15px;
+
+    @include after-clean {
+      top: -50%;
+      font-size: 51px;
+    }
   }
 
   .details__description {

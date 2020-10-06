@@ -348,9 +348,9 @@
   }
 
   .booking__inner {
+    align-items: flex-start;
     width: 100%;
     margin-right: 0;
-    margin-bottom: 30px;
   }
 
   .booking__input-box {
@@ -365,6 +365,7 @@
 
     &--select {
       justify-content: center;
+      width: 33%;
       margin-bottom: 25px;
     }
   }
