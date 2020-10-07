@@ -1,0 +1,93 @@
+.gallery__container {
+  padding-right: 5.3%;
+}
+
+.gallery__navigation-list {
+  margin-bottom: 6.7%;
+}
+
+.gallery__title {
+  width: 50%;
+  margin-bottom: 1.4%;
+
+  @include title-after('Медіа', -119%);
+}
+
+.gallery__line {
+  width: 18%;
+  margin-bottom: 3.1%;
+}
+
+.gallery__line-image {
+  @include after-clean {
+    width: 84%;
+  }
+}
+
+.gallery__tabs {
+  @include flex;
+  @include reset-list;
+  width: 50%;
+}
+
+.gallery__tabs-item {
+  @include transition;
+  @include flex;
+  align-items: center;
+  margin-right: 6%;
+  cursor: default;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &--active {
+    color: $color-gold;
+
+    .gallery__icon {
+      fill: $color-gold;
+    }
+  }
+
+  &:not(.gallery__tabs-item--active) {
+    cursor: pointer;
+
+    @include hover {
+      @include focus-opacity;
+    }
+  }
+}
+
+.gallery__icon {
+  @include transition;
+  margin-right: 15px;
+}
+
+.gallery__wrapper {
+  position: relative;
+}
+
+.gallery__list {
+  @include transition;
+  position: absolute;
+  z-index: -1000;
+  opacity: 0;
+
+  &--active {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    opacity: 1;
+  }
+
+  &--hide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+}

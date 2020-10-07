@@ -1,0 +1,35 @@
+<section class="main__gallery gallery">
+  <div class="gallery__container container">
+
+    <include src="src/html/blocks/navigation/_gallery.html"></include>
+
+    <include src="src/html/blocks/title/_gallery.html"></include>
+
+    <include src="src/html/blocks/line/_gallery.html"></include>
+
+    <ul class="gallery__tabs">
+      <li data-tab-name="gallery__list--photo" class="gallery__tabs-item gallery__tabs-item--active">
+        <!--SVG-->
+        <svg class="gallery__icon gallery__icon--photo" width="36" height="27">
+          <use xlink:href="#icon-photo"></use>
+        </svg>
+        <p class="gallery__tab-description">Фото</p>
+      </li>
+      <li data-tab-name="gallery__list--video" class="gallery__tabs-item">
+        <!--SVG-->
+        <svg class="gallery__icon gallery__icon--photo" width="36" height="27">
+          <use xlink:href="#icon-video"></use>
+        </svg>
+        <p class="gallery__tab-description">Відео</p>
+      </li>
+    </ul>
+
+    <div class="gallery__wrapper">
+
+      <include src="src/html/blocks/offer/gallery/_photo.html"></include>
+
+      <include src="src/html/blocks/offer/gallery/_video.html"></include>
+
+    </div>
+  </div>
+</section>
