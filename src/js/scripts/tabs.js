@@ -7,7 +7,10 @@ const tabControl = () => {
     item.addEventListener('click', selectTabNav);
   });
 
-  function selectTabNav(event) {
+  function selectTabNav() {
+
+    setTimeout(() => AOS.refresh(),0);
+
     tabNavigation.forEach(item => {
       item.classList.remove('gallery__tabs-item--active');
     });

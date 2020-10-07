@@ -1,5 +1,8 @@
 <section class="main__gallery gallery">
-  <div class="gallery__container container">
+
+  <include src="src/html/blocks/parallax/_gallery.html"></include>
+
+  <div class="gallery__container container" >
 
     <include src="src/html/blocks/navigation/_gallery.html"></include>
 
@@ -13,14 +16,14 @@
         <svg class="gallery__icon gallery__icon--photo" width="36" height="27">
           <use xlink:href="#icon-photo"></use>
         </svg>
-        <p class="gallery__tab-description">Фото</p>
+        <p class="gallery__tabs-description">Фото</p>
       </li>
       <li data-tab-name="gallery__list--video" class="gallery__tabs-item">
         <!--SVG-->
         <svg class="gallery__icon gallery__icon--photo" width="36" height="27">
           <use xlink:href="#icon-video"></use>
         </svg>
-        <p class="gallery__tab-description">Відео</p>
+        <p class="gallery__tabs-description">Відео</p>
       </li>
     </ul>
 
@@ -31,5 +34,16 @@
       <include src="src/html/blocks/offer/gallery/_video.html"></include>
 
     </div>
+
+    <div class="gallery__wrapper">
+
+      <include src="src/html/blocks/offer/gallery/_photo.html"></include>
+
+      <include src="src/html/blocks/offer/gallery/_video.html"></include>
+
+    </div>
+
+    <include src="src/html/blocks/pages/_gallery.html"></include>
+
   </div>
 </section>

@@ -1,4 +1,10 @@
+.gallery {
+  position: relative;
+}
+
 .gallery__container {
+  position: relative;
+  z-index: 15;
   padding-right: 5.3%;
 }
 
@@ -15,7 +21,7 @@
 
 .gallery__line {
   width: 18%;
-  margin-bottom: 3.1%;
+  margin-bottom: 4.1%;
 }
 
 .gallery__line-image {
@@ -27,6 +33,8 @@
 .gallery__tabs {
   @include flex;
   @include reset-list;
+  position: relative;
+  z-index: 2;
   width: 50%;
 }
 
@@ -64,7 +72,14 @@
 }
 
 .gallery__wrapper {
+  @include transition;
   position: relative;
+  z-index: 1;
+  margin-top: -7.2%;
+
+  &--disable {
+    display: none;
+  }
 }
 
 .gallery__list {
@@ -89,5 +104,137 @@
     width: 100%;
     height: 100%;
     opacity: 0;
+  }
+}
+
+.gallery__item {
+  height: 620px;
+
+  &:nth-of-type(odd) {
+    margin-top: 11.8%;
+  }
+}
+
+.gallery__pages {
+  position: relative;
+  z-index: 3;
+  width: 47%;
+  padding-right: 0;
+}
+
+.gallery__tabs-description {
+  @include reset-margin-text;
+}
+
+.gallery__video-button {
+  @include video-button;
+
+  &--paused {
+    border-width: 0 0 0 60px;
+    border-style: double;
+  }
+}
+
+.gallery__parallax {
+  padding-top: 8.2%;
+}
+
+.gallery__parallax-wrapper {
+  height: 98%;
+  max-height: 3354px;
+}
+
+// <1600px
+@include desktop-middle {
+  .gallery__icon {
+    width: 28px;
+  }
+
+  .gallery__item {
+    height: 465px;
+  }
+
+  .gallery__parallax-wrapper {
+    max-height: 2529px;
+  }
+}
+
+// <1440px
+@include desktop-small {
+  .gallery__icon {
+    width: 24px;
+  }
+
+  .gallery__item {
+    height: 386px;
+  }
+
+  .gallery__line-image {
+    @include after-clean {
+      width: 81%;
+    }
+  }
+
+  .gallery__parallax-wrapper {
+    max-height: 2110px;
+  }
+}
+
+// <1200px
+@include tablet {
+  .gallery__icon {
+    width: 20px;
+  }
+
+  .gallery__item {
+    height: 250px;
+  }
+
+  .gallery__line-image {
+    @include after-clean {
+      width: 71%;
+    }
+  }
+
+  .gallery__parallax-wrapper {
+    max-height: 1397px;
+  }
+}
+
+// <768px
+@include mobile {
+  .gallery__title {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .gallery__line {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .gallery__tabs {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .gallery__item {
+    height: 210px;
+
+    &:nth-of-type(odd) {
+      margin-top: 0;
+    }
+  }
+
+  .gallery__wrapper {
+    margin-top: 0;
+  }
+
+  .gallery__list {
+    margin-bottom: 30px;
+  }
+
+  .gallery__pages-button {
+    margin-bottom: 20px;
   }
 }

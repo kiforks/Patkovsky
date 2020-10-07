@@ -41,6 +41,19 @@
   margin-bottom: 6.7%;
 }
 
+.main__pages {
+  @include flex;
+  justify-content: space-between;
+  width: 48.5%;
+  margin-top: -4.5%;
+  margin-left: auto;
+  padding-right: 3.1%;
+}
+
+.main__gallery {
+  margin-bottom: 7.2%;
+}
+
 // <1600px
 @include desktop-middle {
   .main {
@@ -86,6 +99,12 @@
     &--pages {
       padding-top: 90px;
     }
+
+    &--gallery {
+      .submission {
+        padding-top: 0;
+      }
+    }
   }
 
   .main__architecture {
@@ -94,6 +113,16 @@
 
   .main__booking {
     margin-bottom: 5px;
+  }
+
+  .main__pages {
+    width: 100%;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .main__gallery {
+    margin-bottom: 0;
   }
 }
 

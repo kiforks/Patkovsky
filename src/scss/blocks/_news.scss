@@ -5,6 +5,7 @@
 
 .news__parallax-wrapper {
   height: 41.8%;
+  max-height: 2291px;
 }
 
 .news__navigation-list {
@@ -115,15 +116,6 @@
   margin-bottom: 16.6%;
 }
 
-.news__pages {
-  @include flex;
-  justify-content: space-between;
-  width: 48.5%;
-  margin-top: -4.5%;
-  margin-left: auto;
-  padding-right: 3.1%;
-}
-
 .news__parallax {
   padding-top: 17.2%;
 }
@@ -140,6 +132,10 @@
 
   .news__time {
     width: 14%;
+  }
+
+  .news__parallax-wrapper {
+    max-height: 1735px;
   }
 }
 
@@ -159,6 +155,10 @@
 
   .news__sub-description {
     width: 89.4%;
+  }
+
+  .news__parallax-wrapper {
+    max-height: 1439px;
   }
 }
 
@@ -188,6 +188,10 @@
     padding-top: 2.6%;
     padding-bottom: 2.9%;
     padding-left: 4%;
+  }
+
+  .news__parallax-wrapper {
+    max-height: 946px;
   }
 }
 
@@ -259,12 +263,6 @@
     &:last-of-type {
       margin-bottom: 0;
     }
-  }
-
-  .news__pages {
-    width: 100%;
-    margin-top: 0;
-    padding: 0;
   }
 }
 

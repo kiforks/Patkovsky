@@ -1,6 +1,7 @@
 .button {
   @include focus-color(white);
   @include transition;
+  @include reset-button;
   position: relative;
   display: inline-block;
   min-width: 360px;
