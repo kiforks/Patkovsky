@@ -79,7 +79,7 @@
 
   </div>
 
-  <div class="contacts__details-box wrapper">
+  <div class="contacts__details-wrapper wrapper">
 
     <include src="src/html/blocks/line/contacts/_organization.html"></include>
 
@@ -111,4 +111,45 @@
     </div>
 
   </div>
+
+  <div class="contacts__details-container wrapper">
+
+    <div class="contacts__details-wrapper contacts__details-wrapper--map">
+
+      <include src="src/html/blocks/line/contacts/_organization.html"></include>
+
+      <div data-aos="fade-up" class="contacts__details-picture">
+        <img src="img/main/contacts/photo-3.jpg" width="735" alt="Patkovski hotel" class="contacts__details-image">
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100" class="contacts__details-inner">
+        <include src="src/html/blocks/title/contacts/_ua.html"></include>
+        <p class="contacts__details-description contacts__details-description--main">Тут можна додати кілька рядків описового тексту про зручне розташування готелю на території України.</p>
+
+        <include src="src/html/blocks/button/contacts/_map.html"></include>
+
+      </div>
+    </div>
+
+    <div class="contacts__details-box">
+
+      <div data-aos="fade-up" data-aos-delay="100" class="contacts__details-title-box">
+
+        <include src="src/html/blocks/title/contacts/_map.html"></include>
+
+        <include src="src/html/blocks/line/contacts/_map.html"></include>
+
+      </div>
+
+      <div data-aos="fade-up"  class="contacts__details-photo">
+        <div class="contacts__details-photo-box contacts__details-photo-box--map">
+          <img src="img/main/contacts/photo-4.jpg" alt="Bukovel" class="contacts__details-photo-item">
+        </div>
+        <include src="src/html/blocks/square-link/contacts/_map.html"></include>
+      </div>
+    </div>
+
+  </div>
+
+  <include src="src/html/blocks/_submission.html"></include>
+
 </section>

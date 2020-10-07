@@ -7,6 +7,10 @@
 .contacts__line {
   width: 34.5%;
   margin-bottom: 1.8%;
+
+  &--map {
+    width: 78%;
+  }
 }
 
 .contacts__container {
@@ -20,6 +24,12 @@
 .contacts__line-image {
   @include after-clean {
     width: 91%;
+  }
+
+  &--map {
+    @include after-clean {
+      width: 89%;
+    }
   }
 }
 
@@ -53,12 +63,16 @@
   }
 }
 
-.contacts__details-box {
+.contacts__details-wrapper {
   @include flex;
   position: relative;
   z-index: 10;
   justify-content: space-between;
   margin-bottom: 4.6%;
+
+  &--map {
+    margin-bottom: 0;
+  }
 }
 
 .contacts__icon {
@@ -214,10 +228,32 @@
     transform: translate(0);
   }
 
+  &--ua,
+  &--map {
+    @include after-clean {
+      content: 'Мапа';
+    }
+  }
+
+  &--map {
+    margin-bottom: 6%;
+    padding-left: 8.6%;
+
+    @include after-clean {
+      left: 6%;
+    }
+  }
+
   span {
     position: relative;
     z-index: 10;
   }
+}
+
+.contacts__details-title-box {
+  width: 32%;
+  padding-top: 14.6%;
+  padding-left: 1.9%;
 }
 
 .contacts__details-description {
@@ -225,12 +261,13 @@
   margin-bottom: 1.2%;
   padding-right: 26%;
 
-  &:last-of-type {
-    margin-bottom: 0;
+  &--main {
+    margin-bottom: 7%;
   }
 }
 
 .contacts__price {
+  margin-bottom: 4.9%;
   text-align: center;
   background-color: $color-beige;
 }
@@ -269,6 +306,58 @@
   }
 }
 
+.contacts__details-box {
+  @include flex;
+  position: relative;
+  z-index: 5;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: -6.5%;
+  background-color: white;
+}
+
+.contacts__details-photo {
+  position: relative;
+  width: 57%;
+  height: 738px;
+  margin-left: auto;
+
+  @include before {
+    @include photo-element;
+  }
+}
+
+.contacts__details-photo-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+
+  @include before {
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.contacts__details-photo-item {
+  @include object-fit(cover);
+}
+
+.contacts__square-link {
+  position: absolute;
+  bottom: 7.6%;
+  left: -134px;
+  z-index: 100;
+}
+
+.contacts__details-container {
+  margin-bottom: 7.2%;
+}
+
 // <1600px
 @include desktop-middle {
   .contacts__inner {
@@ -303,6 +392,15 @@
       top: -100%;
     }
   }
+
+  .contacts__details-photo {
+    height: 551px;
+  }
+
+  .contacts__square-link {
+    bottom: 8.2%;
+    left: -110px;
+  }
 }
 
 // <1440px
@@ -324,6 +422,26 @@
   .contacts__price-line-image {
     @include after-clean {
       width: 94%;
+    }
+  }
+
+  .contacts__details-box {
+    margin-top: -55px;
+  }
+
+  .contacts__details-photo {
+    height: 458px;
+  }
+
+  .contacts__square-link {
+    left: -90px;
+  }
+
+  .contacts__line-image {
+    &--map {
+      @include after-clean {
+        width: 87%;
+      }
     }
   }
 }
@@ -369,12 +487,41 @@
   .contacts__details-title {
     font-size: 24px;
   }
+
+  .contacts__details-box {
+    margin-top: -40px;
+  }
+
+  .contacts__details-photo {
+    height: 291px;
+
+    @include before-clean {
+      height: 15%;
+    }
+  }
+
+  .contacts__square-link {
+    bottom: 10%;
+    left: -70px;
+  }
+
+  .contacts__line-image {
+    &--map {
+      @include after-clean {
+        width: 78%;
+      }
+    }
+  }
 }
 
 // <768px
 @include mobile {
   .contacts {
     font-size: 14px;
+
+    .submission {
+      padding-top: 0;
+    }
   }
 
   .contacts__wrapper {
@@ -462,7 +609,7 @@
     }
   }
 
-  .contacts__details-box {
+  .contacts__details-wrapper {
     margin-bottom: 25px;
   }
 
@@ -479,11 +626,20 @@
 
   .contacts__details-title {
     margin-bottom: 15px;
+
+    &--map {
+      margin-bottom: 10px;
+      padding: 0;
+    }
   }
 
   .contacts__details-description {
     margin-bottom: 10px;
     padding-right: 0;
+
+    &--main {
+      margin-bottom: 20px;
+    }
   }
 
   .contacts__price-wrapper {
@@ -506,6 +662,45 @@
     &--last {
       margin-bottom: 20px;
     }
+  }
+
+  .contacts__details-box {
+    margin-top: 0;
+  }
+
+  .contacts__details-photo {
+    @include flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .contacts__details-photo-box {
+    position: static;
+    height: 187px;
+    margin-bottom: 50px;
+
+    &--map {
+      margin-bottom: 0;
+    }
+  }
+
+
+  .contacts__details-button {
+    @include center-margin;
+  }
+
+  .contacts__details-title-box {
+    width: 100%;
+    padding: 0;
+  }
+
+  .contacts__square-link {
+    font-size: 12px;
+  }
+
+  .contacts__details-container {
+    margin-bottom: 0;
   }
 }
 
