@@ -1,9 +1,9 @@
 .price__wrapper {
-  @include padding-horizon(15.5%);
+  @include padding-horizon(14.5%);
   @include center-margin;
-  width: 89.5%;
-  margin-top: -14.1%;
-  margin-bottom: 2%;
+  width: 84.5%;
+  margin-top: -13.4%;
+  margin-bottom: 1.5%;
   padding-top: 5.5%;
   padding-bottom: 2.3%;
   text-align: center;
@@ -18,11 +18,30 @@
   @include after-clean {
     @include center-transform-horizon;
   }
+
+  &--table {
+    @include after-clean {
+      display: none;
+    }
+  }
+}
+
+.price__subtitle {
+  @include reset-margin-text;
+  margin-bottom: 4.2%;
+  font-size: 36px;
+  line-height: 44px;
+  font-family: $font-family-cormorant;
+  color: $color-black-4;
+}
+
+.price__subtitle-text {
+  color: $color-gold;
 }
 
 .price__line {
   width: 100%;
-  margin-bottom: 1.8%;
+  margin-bottom: 1.6%;
 }
 
 .price__line-image {
@@ -35,8 +54,19 @@
   @include reset-margin-text;
 }
 
-.price__description-gold {
+.price__description-link {
+  @include focus-opacity;
   color: $color-gold;
+}
+
+.price__navigation-list {
+  @include container($desktop-width);
+  @include center-margin;
+  margin-bottom: 2.4%;
+}
+
+.price__box {
+  background-color: $color-beige;
 }
 
 // <768px

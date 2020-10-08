@@ -92,6 +92,23 @@ function swiperInit() {
   })
 }
 
+function progressBarSlider() {
+  var swiper = new Swiper('.swiper-container', {
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'progressbar',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+}
+
 if(document.querySelector('.slider-init')) {
   swiperInit();
 }
+
+// if(document.querySelector('.price') && window.screen.width < 768) {
+//   progressBarSlider();
+// }
