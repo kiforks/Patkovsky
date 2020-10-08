@@ -93,15 +93,12 @@ function swiperInit() {
 }
 
 function progressBarSlider() {
-  var swiper = new Swiper('.swiper-container', {
+  const priceSwiper = new Swiper('.price__table-container', {
     pagination: {
-      el: '.swiper-pagination',
+      el: '.price__pagination--table-one',
       type: 'progressbar',
     },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+    speed: 900
   });
 }
 
@@ -109,6 +106,6 @@ if(document.querySelector('.slider-init')) {
   swiperInit();
 }
 
-// if(document.querySelector('.price') && window.screen.width < 768) {
-//   progressBarSlider();
-// }
+if(document.querySelector('.price') && window.screen.width < 768) {
+  progressBarSlider();
+}
