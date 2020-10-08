@@ -18,7 +18,7 @@ function loadMore(container, item, button = 'pages__button', amount = 1) {
 
     const windowPosition = window.pageYOffset;
 
-    setTimeout(() => AOS.refresh(),0);
+    setTimeout(() => AOS.refresh(),300);
 
     [].forEach.call(document.querySelectorAll('.' + hiddenClass), (item, index) => {
       if (index < loadItems) {

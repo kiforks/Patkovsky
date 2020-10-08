@@ -1,0 +1,60 @@
+.price__wrapper {
+  @include padding-horizon(15.5%);
+  @include center-margin;
+  width: 89.5%;
+  margin-top: -14.1%;
+  margin-bottom: 2%;
+  padding-top: 5.5%;
+  padding-bottom: 2.3%;
+  text-align: center;
+  background-color: white;
+}
+
+.price__title {
+  margin-bottom: 4%;
+
+  @include title-after('Прайс', -120%);
+
+  @include after-clean {
+    @include center-transform-horizon;
+  }
+}
+
+.price__line {
+  width: 100%;
+  margin-bottom: 1.8%;
+}
+
+.price__line-image {
+  @include after-clean {
+    width: 95%;
+  }
+}
+
+.price__description {
+  @include reset-margin-text;
+}
+
+.price__description-gold {
+  color: $color-gold;
+}
+
+// <768px
+@include mobile {
+  .price__wrapper {
+    @include padding-mobile;
+    @include padding-vertical(20px);
+    width: 100%;
+    margin-top: -100px;
+    margin-bottom: 10px;
+  }
+
+  .price__line {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .price__title {
+    margin-bottom: 5px;
+  }
+}

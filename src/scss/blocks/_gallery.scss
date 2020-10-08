@@ -69,6 +69,14 @@
 .gallery__icon {
   @include transition;
   margin-right: 15px;
+
+  &--photo {
+    @include center-transform;
+    position: absolute;
+    z-index: 1000;
+    opacity: 0;
+    fill: white;
+  }
 }
 
 .gallery__wrapper {
@@ -109,7 +117,6 @@
 
 .gallery__item {
   height: 620px;
-  cursor: pointer;
 
   &:nth-of-type(odd) {
     margin-top: 11.8%;
@@ -121,6 +128,37 @@
   z-index: 3;
   width: 47%;
   padding-right: 0;
+}
+
+.gallery__picture {
+  cursor: pointer;
+
+  @include hover {
+    .gallery__icon {
+      &--photo {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  @include active {
+    .gallery__icon {
+      &--photo {
+        width: 40px;
+        opacity: 0.6;
+      }
+    }
+  }
+
+  &--video {
+    cursor: default;
+
+    @include hover {
+      .gallery__video-button {
+        opacity: 0.9;
+      }
+    }
+  }
 }
 
 .gallery__tabs-description {

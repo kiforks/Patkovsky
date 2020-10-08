@@ -323,6 +323,14 @@
     }
   }
 
+  &--price {
+    background-image: url('../img/main/price/background.jpg');
+
+    @include after-clean {
+      display: none;
+    }
+  }
+
   .header__item {
     &:last-of-type {
       margin-bottom: 0;
@@ -391,7 +399,7 @@
 .header__wrapper {
   @include flex;
   align-items: center;
-  min-height: 98px;
+  min-height: 84px;
 }
 
 .header__link {
@@ -692,7 +700,8 @@
 
     &--fixed {
       .header__logo {
-        width: 19%;
+        width: 18%;
+        max-width: 273px;
       }
     }
   }
@@ -775,6 +784,7 @@
     &--fixed {
       .header__logo {
         width: 18%;
+        max-width: 216px;
       }
     }
   }
