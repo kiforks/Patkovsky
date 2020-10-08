@@ -109,6 +109,7 @@
 
 .gallery__item {
   height: 620px;
+  cursor: pointer;
 
   &:nth-of-type(odd) {
     margin-top: 11.8%;

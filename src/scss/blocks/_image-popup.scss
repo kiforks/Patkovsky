@@ -1,0 +1,121 @@
+.image-popup {
+  @include transition;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  animation: $transition-duration fadeIn;
+
+  &--active,
+  &--hide {
+    display: flex;
+    opacity: 1;
+  }
+
+  &--hide {
+    opacity: 0;
+  }
+}
+
+.image-popup__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 827px;
+  height: 620px;
+}
+
+.image-popup__picture {
+  @include object-fit(cover);
+}
+
+.image-popup__photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+
+  @include before {
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    background-color: white;
+  }
+}
+
+.image-popup__button {
+  @include focus-scale();
+  @include reset-button;
+  position: absolute;
+  top: -51px;
+  right: -51px;
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+
+  @include before-after {
+    @include center-transform-vertical;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $color-gold;
+  }
+
+  @include before-clean {
+    transform: rotate(45deg);
+  }
+
+  @include after-clean {
+    transform: rotate(-45deg);
+  }
+}
+
+// <1600px
+@include desktop-middle {
+  .image-popup__wrapper {
+    width: 600px;
+    height: 450px;
+  }
+
+  .image-popup__button {
+    top: -40px;
+    right: -40px;
+    width: 28px;
+    height: 28px;
+  }
+}
+
+// <1440px
+@include desktop-small {
+  .image-popup__wrapper {
+    width: 500px;
+    height: 375px;
+  }
+}
+
+// <768px
+@include mobile {
+  .image-popup__wrapper {
+    width: 320px;
+    height: 240px;
+  }
+  .image-popup__button {
+    right: 0;
+  }
+}
+
