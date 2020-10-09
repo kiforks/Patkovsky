@@ -69,6 +69,7 @@
 .gallery__icon {
   @include transition;
   margin-right: 15px;
+  fill: $color-black;
 
   &--photo {
     @include center-transform;

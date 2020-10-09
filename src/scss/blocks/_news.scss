@@ -1,3 +1,8 @@
+.news {
+  position: relative;
+  z-index: 1;
+}
+
 .news__container {
   position: relative;
   z-index: 100;
@@ -6,6 +11,58 @@
 .news__parallax-wrapper {
   height: 41.8%;
   max-height: 2291px;
+}
+
+.news__sub-picture {
+  @include transition;
+  display: block;
+  cursor: pointer;
+
+  @include hover {
+    @include after-clean {
+      background-color: $color-gold;
+      opacity: 0.5;
+    }
+
+    .news__sub-image {
+      width: 100.5%;
+      max-width: 100.5%;
+      height: 100.5%;
+      max-height: 100.5%;
+    }
+  }
+
+  @include after-clean {
+    @include transition;
+  }
+}
+
+.news__sub-image {
+  @include transition;
+}
+
+.news__picture {
+  @include transition;
+  display: block;
+  overflow: hidden;
+
+  @include hover {
+    @include after-clean {
+      background-color: $color-gold;
+      opacity: 0.5;
+    }
+
+    .news__image {
+      width: 100.5%;
+      max-width: 100.5%;
+      height: 100.5%;
+      max-height: 100.5%;
+    }
+  }
+}
+
+.news__image {
+  @include transition;
 }
 
 .news__navigation-list {

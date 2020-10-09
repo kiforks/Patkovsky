@@ -324,6 +324,7 @@
   }
 
   &--price {
+    height: 810px;
     background-image: url('../img/main/price/background.jpg');
 
     @include after-clean {
@@ -693,6 +694,10 @@
         height: 80px;
       }
     }
+
+    &--price {
+      height: 607px;
+    }
   }
 
   .header__box {
@@ -776,6 +781,10 @@
         padding-bottom: 0;
       }
     }
+
+    &--price {
+      height: 504px;
+    }
   }
 
   .header__box {
@@ -836,6 +845,10 @@
         @include padding-vertical(10px);
         @include padding-horizon(16px, 10px);
       }
+    }
+
+    &--price {
+      height: 323px;
     }
   }
 
