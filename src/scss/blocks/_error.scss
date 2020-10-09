@@ -1,0 +1,60 @@
+.error {
+  @include container(698px);
+  @include flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.error__subtitle,
+.error__title,
+.error__description {
+  @include reset-margin-text;
+}
+
+.error__subtitle {
+  margin-bottom: 1%;
+  font-family: $font-family-cormorant;
+  font-size: 165px;
+  line-height: 228px;
+  color: #F1EDE1;
+}
+
+.error__title {
+  margin-bottom: 4%;
+}
+
+.error__description {
+  margin-bottom: 8%;
+}
+
+// <1600px
+@include desktop-middle {
+  .error__subtitle {
+    font-size: 130px;
+    line-height: 100%;
+    margin-bottom: 5%;
+  }
+}
+
+// <1440px
+@include desktop-small {
+  .error__subtitle {
+    font-size: 110px;
+  }
+}
+
+// <1200px
+@include tablet {
+  .error__subtitle {
+    font-size: 80px;
+  }
+}
+
+// <768px
+@include mobile {
+  .error__subtitle {
+    font-size: 60px;
+  }
+}

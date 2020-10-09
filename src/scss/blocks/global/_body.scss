@@ -31,7 +31,8 @@ body {
 }
 
 .body {
-  &--active {
+  &--active,
+  &--error {
     overflow: hidden;
   }
 }

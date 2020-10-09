@@ -14,6 +14,10 @@
   &--price {
     margin-bottom: 0;
   }
+
+  &--error {
+    background: linear-gradient(180deg, #FFFFFF 0%, #E3E3E3 100%);
+  }
 }
 
 .main__details {
@@ -70,6 +74,30 @@
 
 .main__default-news {
   margin-bottom: 6%;
+}
+
+.main__picture {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+
+  &--owl {
+    top: 25%;
+    left: 10%;
+    width: 19%;
+    height: 38%;
+    background-image: url('../img/main/global/owl.png');
+  }
+
+  &--deer {
+    right: 0;
+    bottom: -10%;
+    width: 33%;
+    height: 96%;
+    overflow: hidden;
+    background-image: url('../img/main/global/deer.png');
+  }
 }
 
 // <1600px
@@ -149,6 +177,21 @@
 
   .main__default-news {
     margin-bottom: 30px;
+  }
+
+  .main__picture {
+    &--deer {
+      top: 2%;
+      bottom: auto;
+      width: 44%;
+    }
+
+    &--owl {
+      top: auto;
+      bottom: 2%;
+      width: 40%;
+      height: 23%;
+    }
   }
 }
 
