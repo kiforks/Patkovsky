@@ -931,7 +931,8 @@
       }
 
       .header__languages {
-        position: static;
+        position: relative;
+        top: 0;
         color: white;
         opacity: 1;
 

@@ -93,9 +93,17 @@ function swiperInit() {
 }
 
 function progressBarSlider() {
-  const priceSwiper = new Swiper('.price__table-container', {
+  const priceSwiper = new Swiper('.price__table-container--main', {
     pagination: {
       el: '.price__pagination--table-one',
+      type: 'progressbar',
+    },
+    speed: 900
+  });
+
+  const priceSwiperSecond = new Swiper('.price__table-container--second', {
+    pagination: {
+      el: '.price__pagination--table-two',
       type: 'progressbar',
     },
     speed: 900
