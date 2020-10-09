@@ -1,8 +1,8 @@
 .error {
   @include container(698px);
   @include flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100vh;
   text-align: center;
 }
@@ -15,9 +15,9 @@
 
 .error__subtitle {
   margin-bottom: 1%;
-  font-family: $font-family-cormorant;
   font-size: 165px;
   line-height: 228px;
+  font-family: $font-family-cormorant;
   color: #F1EDE1;
 }
 
@@ -32,9 +32,9 @@
 // <1600px
 @include desktop-middle {
   .error__subtitle {
+    margin-bottom: 5%;
     font-size: 130px;
     line-height: 100%;
-    margin-bottom: 5%;
   }
 }
 

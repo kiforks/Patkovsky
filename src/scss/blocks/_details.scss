@@ -351,6 +351,12 @@
   .details__line {
     top: 0;
   }
+
+  .details__title {
+    @include after-clean {
+      font-size: 70px;
+    }
+  }
 }
 
 // <768px

@@ -11,8 +11,6 @@
 </head>
 <body class="body body--main slider-init fixed-header">
 
-  <include src="src/html/templates/sprite.html"></include>
-
   <include src="src/html/blocks/_preloader.html"></include>
 
   <include src="src/html/blocks/header/_main.html"></include>
@@ -39,6 +37,13 @@
 
   <include src="src/html/blocks/_footer.html"></include>
 
+
+
+<!--  Модальне вікно викликається за методом myModal.open(), а закривається myModal.close(). -->
+
+<!--  Якщо потрібно привязати його до кнопки, то гляньте файл modal_init.js в папці js/plugins -->
+  <include src="src/html/blocks/_modal.html"></include>
+
   <!--JS-->
   <script src="js/plugins/flatpickr.js"></script>
   <script src="js/plugins/flatpickr_uk.js"></script>
@@ -46,6 +51,11 @@
   <script src="js/plugins/aos.js"></script>
   <script src="js/plugins/select_dropdown.js"></script>
   <script src="js/plugins/swiper.js"></script>
+  <script src="js/plugins/modal.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/plugins/modal_init.js"></script>
+
+  <include src="src/html/templates/sprite.html"></include>
+
 </body>
 </html>
