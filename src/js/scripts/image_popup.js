@@ -9,7 +9,7 @@ const imageZoom = () => {
     const target = event.target;
 
     if(target === popupWindow || target === popupButton) {
-      body.classList.remove('body--active');
+      // body.classList.remove('body--active');
 
       popupWindow.classList.remove('image-popup--active');
 
@@ -24,8 +24,8 @@ const imageZoom = () => {
       event.stopPropagation();
 
       const targetImage = img.querySelector('.gallery__image');
-
-      body.classList.add('body--active');
+      //
+      // body.classList.add('body--active');
 
       popupWindow.classList.add('image-popup--active');
 
