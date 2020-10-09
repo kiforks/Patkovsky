@@ -37,7 +37,7 @@ function fixedProgressBar(prefix) {
   })
 }
 
-if(document.querySelector('.price')) {
+if(document.querySelector('.price') && !document.querySelector('.video')) {
   fixedProgressBar('--main');
   fixedProgressBar('--second');
 }

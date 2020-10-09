@@ -8,6 +8,10 @@
   padding-bottom: 2.3%;
   text-align: center;
   background-color: white;
+
+  &--default {
+    margin-bottom: 5.2%;
+  }
 }
 
 .price__category,
@@ -32,6 +36,12 @@
   &--table {
     @include after-clean {
       display: none;
+    }
+  }
+
+  &--fun {
+    @include after-clean {
+      content: 'Розваги';
     }
   }
 }

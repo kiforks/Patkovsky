@@ -1,0 +1,183 @@
+.default-news__title {
+  width: 50%;
+  margin-bottom: 1.4%;
+
+  @include title-after('Гостям', -120%);
+}
+
+.default-news__line {
+  width: 35%;
+}
+
+.default-news__line-image {
+  @include after-clean {
+    width: 91%;
+  }
+}
+
+.default-news__wrapper {
+  position: relative;
+  z-index: 1;
+  margin-top: -7.9%;
+  padding-right: 3.1%;
+}
+
+.default-news__list {
+  @include flex;
+  @include reset-list;
+  justify-content: space-between;
+}
+
+.default-news__item {
+  width: 47%;
+
+  &--photo {
+    margin-top: 11.8%;
+  }
+}
+
+.default-news__description {
+  @include reset-margin-text;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  padding: 3.9% 5.2%;
+  font-size: 36px;
+  line-height: 44px;
+  font-family: $font-family-cormorant;
+  color: $color-black;
+  background-color: white;
+}
+
+.default-news__box {
+  position: relative;
+  z-index: 10;
+}
+
+.default-news__text {
+  color: $color-gold;
+}
+
+.default-news__link {
+  @include flex;
+  position: relative;
+  align-items: flex-end;
+  width: 100%;
+  height: 620px;
+  padding-bottom: 3%;
+  padding-left: 3%;
+  transition: all 0.4s ease-in-out;
+
+  @include hover {
+    transform: scale(0.995);
+
+    .default-news__picture {
+      @include before-clean {
+        background-color: $color-gold;
+      }
+    }
+  }
+}
+
+.default-news__picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  @include before {
+    @include transition;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0.2;
+  }
+}
+
+.default-news__image {
+  @include transition;
+  @include object-fit(cover);
+}
+
+// <1600px
+@include desktop-middle {
+  .default-news__link {
+    height: 461px;
+  }
+
+  .default-news__description {
+    font-size: 28px;
+    line-height: 130%;
+  }
+}
+
+// <1440px
+@include desktop-small {
+  .default-news__link {
+    eight: 379px;
+  }
+
+  .default-news__description {
+    font-size: 24px;
+  }
+}
+
+// <1200px
+@include tablet {
+  .default-news__link {
+    height: 241px;
+  }
+
+  .default-news__description {
+    font-size: 16px;
+  }
+}
+
+// <768px
+@include mobile {
+  .default-news__title {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .default-news__box {
+    margin-bottom: 20px;
+  }
+
+  .default-news__wrapper {
+    margin-top: 0;
+    padding-right: 0;
+  }
+
+  .default-news__line {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .default-news__item {
+    width: 100%;
+    margin-bottom: 10px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &--photo {
+      margin-top: 0;
+    }
+  }
+
+  .default-news__link {
+    height: 210px;
+  }
+
+  .default-news__description {
+    font-size: 14px;
+  }
+}

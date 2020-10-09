@@ -31,6 +31,10 @@
   position: relative;
   z-index: 100;
   margin-top: -260px;
+
+  &--default {
+    margin-bottom: 5%;
+  }
 }
 
 .main__room {
@@ -56,6 +60,16 @@
 
 .main__gallery {
   margin-bottom: 7.2%;
+}
+
+.main__price {
+  &--default {
+    margin-bottom: 2%;
+  }
+}
+
+.main__default-news {
+  margin-bottom: 6%;
 }
 
 // <1600px
@@ -131,6 +145,10 @@
 
   .main__gallery {
     margin-bottom: 0;
+  }
+
+  .main__default-news {
+    margin-bottom: 30px;
   }
 }
 

@@ -13,10 +13,29 @@
     content: 'Концепт';
     top: 5%;
   }
+
+  &--default {
+    @include after-clean {
+      content: 'Карпати';
+      top: 3%;
+    }
+  }
+}
+
+.architecture__line-background {
+  position: absolute !important;
 }
 
 .architecture__description {
   @include reset-margin-text;
+
+  &--default {
+    margin-bottom: 3%;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .architecture__description,
@@ -37,6 +56,12 @@
 // <1200px
 @include tablet {
   .architecture__line {
+    @include after-clean {
+      width: 91%;
+    }
+  }
+
+  .architecture__line-image {
     @include after-clean {
       width: 91%;
     }
